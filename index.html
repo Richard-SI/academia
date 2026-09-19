@@ -1,0 +1,602 @@
+<title>Richard Machado · Personal</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap">
+<style>
+:root{--bg:#0c0c0c;--bg2:#141414;--bg3:#1a1a1a;--surface:#1e1e1e;--surface2:#252525;--border:#2a2a2a;--orange:#f97316;--orange-lt:#fb923c;--text:#f0f0f0;--text2:#a0a0a0;--text3:#6b6b6b;--green:#22c55e;--red:#ef4444;--radius:12px}
+*,*::before,*::after{box-sizing:border-box}
+*{margin:0}
+body{background:var(--bg);color:var(--text);font-family:'Inter',system-ui,sans-serif;font-size:16px;line-height:1.6;padding-inline:0}
+h1,h2,h3,.display{font-family:'Oswald',sans-serif;text-wrap:balance;line-height:1.05;letter-spacing:-.01em}
+.label{font-size:11px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--orange)}
+.container{max-width:680px;margin-inline:auto;padding-inline:20px}
+.section{padding-block:64px}
+.section-alt{background:var(--bg2)}
+
+/* NAV */
+.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:100;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}
+.nav-inner{max-width:680px;margin-inline:auto;padding:12px 20px;display:flex;align-items:center;gap:12px}
+.nav-logo{width:36px;height:36px;border-radius:50%;background:var(--orange);color:#000;font-family:'Oswald',sans-serif;font-weight:700;font-size:16px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.nav-name{font-size:13px;font-weight:600;color:var(--text2);flex:1}
+.nav-links{display:flex;align-items:center;gap:8px}
+.btn-ghost{display:flex;align-items:center;gap:6px;padding:7px 14px;border-radius:50px;border:1px solid var(--border);background:transparent;color:var(--text);font-size:13px;font-weight:500;text-decoration:none;transition:border-color .2s}
+.btn-ghost:hover{border-color:var(--text2)}
+.btn-orange{display:flex;align-items:center;gap:6px;padding:8px 16px;border-radius:50px;background:var(--orange);color:#000;font-size:13px;font-weight:600;text-decoration:none;transition:background .2s}
+.btn-orange:hover{background:var(--orange-lt)}
+
+/* TOPBAR */
+.topbar{background:var(--bg2);border-bottom:1px solid var(--border);padding:9px 20px;text-align:center;font-size:12px;color:var(--text2);display:flex;align-items:center;justify-content:center;gap:20px;flex-wrap:wrap}
+
+/* HERO */
+.hero{padding-block:64px 56px;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;top:-100px;right:-100px;width:400px;height:400px;background:radial-gradient(circle,color-mix(in srgb,var(--orange) 12%,transparent) 0%,transparent 70%);pointer-events:none}
+.hero-tag{display:inline-flex;align-items:center;gap:6px;padding:5px 12px;border-radius:50px;border:1px solid color-mix(in srgb,var(--orange) 35%,transparent);background:color-mix(in srgb,var(--orange) 10%,transparent);margin-bottom:20px}
+.hero-tag .dot{width:6px;height:6px;border-radius:50%;background:var(--orange)}
+.hero-headline{font-family:'Oswald',sans-serif;font-size:clamp(36px,8vw,52px);font-weight:700;line-height:1.05;margin-bottom:20px}
+.hero-headline .accent{color:var(--orange)}
+.hero-desc{font-size:16px;color:var(--text2);line-height:1.7;margin-bottom:28px}
+.social-proof{display:flex;align-items:center;gap:12px;margin-bottom:28px}
+.avatars{display:flex}
+.avatar{width:32px;height:32px;border-radius:50%;border:2px solid var(--bg);display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;margin-left:-8px}
+.avatar:first-child{margin-left:0}
+.av-a{background:#7c3aed;color:#fff}.av-b{background:#0ea5e9;color:#fff}.av-c{background:#16a34a;color:#fff}.av-d{background:#dc2626;color:#fff}
+.proof-text{font-size:13px}
+.proof-text strong{color:var(--text)}
+.proof-text span{color:var(--text2);display:block}
+.stars{color:var(--orange);font-size:13px}
+.cta-group{display:flex;flex-direction:column;gap:10px}
+.btn-primary{display:flex;align-items:center;justify-content:center;gap:8px;padding:16px 28px;border-radius:50px;background:var(--orange);color:#000;font-size:16px;font-weight:600;text-decoration:none;border:none;transition:background .2s,transform .15s;font-family:'Oswald',sans-serif;letter-spacing:.02em}
+.btn-primary:hover{background:var(--orange-lt);transform:translateY(-1px)}
+.reply-note{font-size:12px;color:var(--text3);text-align:center}
+.btn-secondary{display:flex;align-items:center;justify-content:center;gap:8px;padding:14px 28px;border-radius:50px;background:transparent;border:1px solid var(--border);color:var(--text);font-size:15px;font-weight:500;text-decoration:none;transition:border-color .2s;font-family:'Oswald',sans-serif;letter-spacing:.02em}
+.btn-secondary:hover{border-color:var(--text2)}
+.badges-bar{display:flex;flex-wrap:wrap;gap:10px;margin-top:32px;padding-top:32px;border-top:1px solid var(--border)}
+.badge-item{display:flex;align-items:center;gap:7px;font-size:12px;color:var(--text2)}
+.badge-icon{width:28px;height:28px;border-radius:8px;background:var(--surface);display:flex;align-items:center;justify-content:center;font-size:14px;flex-shrink:0}
+
+/* ACCORDION */
+.accordion-item{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;margin-top:8px}
+.accordion-item:first-child{margin-top:0}
+.accordion-trigger{width:100%;padding:18px 20px;display:flex;align-items:center;gap:12px;background:none;border:none;color:var(--text);font-size:15px;font-weight:500;text-align:left;cursor:pointer;font-family:'Inter',sans-serif}
+.acc-icon{width:28px;height:28px;border-radius:50%;background:color-mix(in srgb,var(--orange) 15%,transparent);border:1px solid color-mix(in srgb,var(--orange) 30%,transparent);display:flex;align-items:center;justify-content:center;font-size:14px;flex-shrink:0}
+
+/* QUOTE */
+.quote-box{border-left:3px solid var(--orange);padding:16px 20px;margin-block:24px}
+.quote-box p{font-size:15px;font-weight:500}
+.quote-box .sub{font-size:13px;color:var(--text2);margin-top:4px}
+
+/* PAIN GRID */
+.pain-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.pain-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:14px 16px;display:flex;align-items:flex-start;gap:10px;font-size:13px;line-height:1.4}
+.pain-x{width:20px;height:20px;border-radius:50%;background:color-mix(in srgb,var(--red) 15%,transparent);border:1px solid color-mix(in srgb,var(--red) 35%,transparent);display:flex;align-items:center;justify-content:center;flex-shrink:0;color:var(--red);font-size:10px;margin-top:2px}
+
+/* TAGS */
+.tag-list{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.tag{padding:5px 12px;border-radius:50px;background:var(--surface2);border:1px solid var(--border);font-size:12px;font-weight:500;color:var(--text2)}
+
+/* PHILOSOPHY */
+.phil-item{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:20px;display:flex;gap:14px;margin-top:12px}
+.phil-icon{width:40px;height:40px;border-radius:10px;background:color-mix(in srgb,var(--orange) 15%,transparent);display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0}
+.phil-item h3{font-size:15px;font-weight:600;margin-bottom:4px;font-family:'Inter',sans-serif}
+.phil-item p{font-size:13px;color:var(--text2);line-height:1.5}
+
+/* METHOD */
+.methods-row{display:flex;gap:10px;margin-top:20px;flex-wrap:wrap}
+.method-pill{padding:10px 20px;border-radius:50px;background:var(--surface);border:1px solid var(--border);font-size:14px;font-weight:500}
+
+/* FOR/NOT FOR */
+.for-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:24px}
+.for-card{border-radius:var(--radius);padding:20px;border:1px solid}
+.for-card.yes{border-color:color-mix(in srgb,var(--orange) 40%,transparent);background:color-mix(in srgb,var(--orange) 6%,transparent)}
+.for-card.no{border-color:var(--border);background:var(--surface)}
+.for-title{font-size:14px;font-weight:600;margin-bottom:14px;display:flex;align-items:center;gap:8px}
+.for-badge{width:22px;height:22px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px}
+.for-card.yes .for-badge{background:var(--orange);color:#000}
+.for-card.no .for-badge{background:color-mix(in srgb,var(--red) 20%,transparent);color:var(--red);border:1px solid color-mix(in srgb,var(--red) 30%,transparent)}
+.for-list{list-style:none;padding:0;display:flex;flex-direction:column;gap:8px}
+.for-list li{display:flex;align-items:flex-start;gap:8px;font-size:12px;line-height:1.4;color:var(--text2)}
+.for-list li::before{flex-shrink:0;margin-top:2px;font-size:11px}
+.for-card.yes .for-list li::before{content:'✓';color:var(--orange)}
+.for-card.no .for-list li::before{content:'✗';color:var(--red)}
+
+/* DELIVERY */
+.delivery-item{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:18px 20px;display:flex;gap:14px;margin-top:10px}
+.del-icon{width:36px;height:36px;border-radius:10px;background:color-mix(in srgb,var(--orange) 15%,transparent);display:flex;align-items:center;justify-content:center;font-size:17px;flex-shrink:0}
+.delivery-item h3{font-size:14px;font-weight:600;margin-bottom:2px;font-family:'Inter',sans-serif}
+.delivery-item p{font-size:12px;color:var(--text2);line-height:1.4}
+
+/* STEPS */
+.step-item{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:18px 20px;display:flex;gap:14px;align-items:flex-start;margin-top:10px}
+.step-num{width:36px;height:36px;border-radius:50%;background:var(--orange);color:#000;font-family:'Oswald',sans-serif;font-size:18px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.step-item h3{font-size:15px;font-weight:600;margin-bottom:3px;font-family:'Inter',sans-serif}
+.step-item p{font-size:13px;color:var(--text2);line-height:1.4}
+
+/* TESTIMONIALS */
+.test-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:20px;margin-top:12px}
+.test-header{display:flex;align-items:center;gap:12px;margin-bottom:12px}
+.test-av{width:40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:14px;color:#fff;flex-shrink:0}
+.test-name{font-size:14px;font-weight:600}
+.test-meta{font-size:12px;color:var(--text2)}
+.test-badge{display:inline-flex;align-items:center;gap:4px;padding:3px 8px;border-radius:50px;background:color-mix(in srgb,var(--orange) 15%,transparent);border:1px solid color-mix(in srgb,var(--orange) 30%,transparent);font-size:11px;color:var(--orange);margin-top:3px}
+.test-quote{font-size:14px;color:var(--text2);line-height:1.6;font-style:italic}
+.test-plan{font-size:11px;color:var(--text3);margin-top:10px;text-transform:uppercase;letter-spacing:.08em}
+
+/* INSTA */
+.insta-btn{display:flex;align-items:center;justify-content:center;gap:8px;padding:16px 28px;border-radius:50px;background:linear-gradient(135deg,#f97316,#e1306c,#833ab4);color:#fff;font-size:16px;font-weight:600;text-decoration:none;margin-top:20px;transition:opacity .2s,transform .15s;font-family:'Oswald',sans-serif;letter-spacing:.03em}
+.insta-btn:hover{opacity:.9;transform:translateY(-1px)}
+
+/* FAQ */
+.faq-item{border-bottom:1px solid var(--border)}
+.faq-trigger{width:100%;padding:18px 0;display:flex;align-items:center;justify-content:space-between;gap:12px;background:none;border:none;color:var(--text);font-size:15px;font-weight:500;text-align:left;cursor:pointer;font-family:'Inter',sans-serif}
+.faq-chev{width:24px;height:24px;border-radius:50%;background:var(--surface);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:11px;flex-shrink:0;transition:transform .2s}
+.faq-item.open .faq-chev{transform:rotate(180deg)}
+.faq-answer{font-size:14px;color:var(--text2);line-height:1.6;padding-bottom:18px;display:none}
+.faq-item.open .faq-answer{display:block}
+
+/* FINAL CTA */
+.final-cta{background:var(--orange);border-radius:16px;padding:36px 28px;text-align:center;color:#000;margin-block:32px}
+.final-cta .label{color:rgba(0,0,0,.5)}
+.final-cta h2{font-size:clamp(24px,5vw,32px);color:#000;margin-block:12px}
+.final-cta p{font-size:15px;color:rgba(0,0,0,.7);max-width:460px;margin-inline:auto}
+.btn-dark{display:inline-flex;align-items:center;gap:8px;padding:14px 28px;border-radius:50px;background:#000;color:#fff;font-size:16px;font-weight:600;text-decoration:none;margin-top:24px;transition:background .2s;font-family:'Oswald',sans-serif;letter-spacing:.02em}
+.btn-dark:hover{background:#1a1a1a}
+
+/* PLANS */
+.plan-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:24px;margin-top:12px;position:relative}
+.plan-card.featured{border-color:var(--orange);background:color-mix(in srgb,var(--orange) 5%,var(--surface))}
+.plan-badge{position:absolute;top:-1px;left:50%;transform:translateX(-50%);background:var(--orange);color:#000;font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:4px 14px;border-radius:0 0 8px 8px;white-space:nowrap}
+.plan-label{font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--text3);margin-bottom:8px;display:flex;align-items:center;gap:6px}
+.plan-price{display:flex;align-items:baseline;gap:4px;margin-bottom:4px}
+.plan-price .cur{font-size:18px;font-weight:600;color:var(--text2);font-family:'Oswald',sans-serif}
+.plan-price .amt{font-size:48px;font-weight:700;color:var(--text);font-family:'Oswald',sans-serif;font-variant-numeric:tabular-nums}
+.plan-price .per{font-size:14px;color:var(--text2)}
+.plan-note{font-size:12px;color:var(--text3);margin-bottom:4px}
+.plan-hot{font-size:12px;color:var(--green);margin-bottom:14px}
+.plan-desc{font-size:13px;color:var(--text2);margin-bottom:16px;line-height:1.5;padding-bottom:16px;border-bottom:1px solid var(--border)}
+.plan-feats{list-style:none;padding:0;display:flex;flex-direction:column;gap:8px;margin-bottom:20px}
+.plan-feats li{font-size:13px;display:flex;align-items:center;gap:8px}
+.plan-feats li::before{content:'✓';color:var(--orange);font-weight:700;flex-shrink:0}
+.btn-plan{display:flex;align-items:center;justify-content:center;padding:14px;border-radius:50px;border:1px solid var(--border);background:transparent;color:var(--text);font-size:15px;font-weight:600;text-decoration:none;transition:background .2s,border-color .2s;font-family:'Oswald',sans-serif;letter-spacing:.03em}
+.btn-plan:hover{background:var(--surface2);border-color:var(--text2)}
+.plan-card.featured .btn-plan{background:var(--orange);border-color:var(--orange);color:#000}
+.plan-card.featured .btn-plan:hover{background:var(--orange-lt)}
+
+/* FOOTER */
+.footer{padding-block:32px;border-top:1px solid var(--border);text-align:center;font-size:12px;color:var(--text3)}
+.footer a{color:var(--text3);text-decoration:none}
+.footer a:hover{color:var(--text2)}
+
+@media(max-width:520px){
+  .for-grid,.pain-grid{grid-template-columns:1fr}
+  .nav-name{display:none}
+}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav-inner">
+    <div class="nav-logo">R</div>
+    <span class="nav-name">Richard Machado · Personal</span>
+    <div class="nav-links">
+      <a href="https://instagram.com/richard_n_machado" target="_blank" rel="noopener" class="btn-ghost">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg>
+        Insta
+      </a>
+      <a href="https://wa.me/5542991804793" target="_blank" rel="noopener" class="btn-orange">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.116.549 4.104 1.508 5.831L0 24l6.335-1.652A11.954 11.954 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.815 9.815 0 01-5.056-1.401l-.361-.215-3.762.981.999-3.662-.235-.374A9.774 9.774 0 012.182 12c0-5.42 4.398-9.818 9.818-9.818 5.42 0 9.818 4.398 9.818 9.818 0 5.42-4.398 9.818-9.818 9.818z"/></svg>
+        WhatsApp
+      </a>
+    </div>
+  </div>
+</nav>
+
+<!-- TOPBAR -->
+<div class="topbar">
+  <span>🏋️ Reg. 12345678-0 · Profissional registrado</span>
+  <span>❤️ Saúde antes da estética</span>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-tag">
+      <span class="dot"></span>
+      <span class="label" style="font-size:11px">Richard Nunes Machado · Personal Trainer</span>
+    </div>
+    <h1 class="hero-headline">
+      Seu objetivo.<br>Seu treino.<br><span class="accent">Seus resultados.</span>
+    </h1>
+    <p class="hero-desc">
+      Chega de treinar sem saber se está no caminho certo. Com um planejamento personalizado, você terá um treino desenvolvido de acordo com seus objetivos, sua rotina e seu nível atual, além de acompanhamento para evoluir de forma consistente.
+    </p>
+    <div class="social-proof">
+      <div class="avatars">
+        <div class="avatar av-a">JP</div>
+        <div class="avatar av-b">RS</div>
+        <div class="avatar av-c">AL</div>
+        <div class="avatar av-d">CB</div>
+      </div>
+      <div class="proof-text">
+        <span class="stars">★★★★★ 4.9</span>
+        <span>+60 pessoas construindo rotina comigo</span>
+      </div>
+    </div>
+    <div class="cta-group">
+      <a href="https://wa.me/5542991804793" target="_blank" rel="noopener" class="btn-primary">💬 Conversar com o Richard</a>
+      <p class="reply-note">ℹ️ Eu respondo pessoalmente, normalmente em até 4h</p>
+      <a href="#planos" class="btn-secondary">↓ Conheça os planos</a>
+    </div>
+    <div class="badges-bar">
+      <div class="badge-item"><div class="badge-icon">⏱️</div> Poucos minutos por dia</div>
+      <div class="badge-item"><div class="badge-icon">📅</div> 3 a 5x por semana</div>
+      <div class="badge-item"><div class="badge-icon">🍎</div> Orientação nutricional</div>
+      <div class="badge-item"><div class="badge-icon">📱</div> Suporte via WhatsApp</div>
+    </div>
+  </div>
+</section>
+
+<!-- PRA QUEM É -->
+<section class="section section-alt">
+  <div class="container">
+    <p class="label">PRA QUEM É</p>
+    <h2 style="font-size:clamp(28px,6vw,40px);margin-block:10px 12px">Pra quem quer reencontrar o próprio ritmo.</h2>
+    <p style="color:var(--text2);font-size:15px;margin-bottom:24px">Esse espaço é seu, principalmente se você já tentou treinar mas não saiu do lugar. Aqui a gente começa do ponto certo, com um plano feito para você:</p>
+    <div>
+      <div class="accordion-item"><button class="accordion-trigger"><span class="acc-icon">❤️</span>Você que treina mas não vê resultado</button></div>
+      <div class="accordion-item"><button class="accordion-trigger"><span class="acc-icon">❤️</span>Você que não sabe por onde começar</button></div>
+      <div class="accordion-item"><button class="accordion-trigger"><span class="acc-icon">❤️</span>Você que acha que treino "não é pra mim"</button></div>
+      <div class="accordion-item"><button class="accordion-trigger"><span class="acc-icon">❤️</span>Você que nunca treinou e tem medo de começar errado</button></div>
+      <div class="accordion-item"><button class="accordion-trigger"><span class="acc-icon">❤️</span>Você que já tentou várias vezes e sempre desistiu</button></div>
+      <div class="accordion-item"><button class="accordion-trigger"><span class="acc-icon">❤️</span>Você que quer mudar o corpo mas, principalmente, quer se sentir bem de novo</button></div>
+    </div>
+    <div class="quote-box">
+      <p>Não importa de onde você está saindo. Importa pra onde a gente vai.</p>
+      <p class="sub">Aqui ninguém julga. A gente começa do seu nível, no seu ritmo, e constrói junto.</p>
+    </div>
+    <a href="https://wa.me/5542991804793" target="_blank" rel="noopener" class="btn-primary">💬 Quero falar com o Richard</a>
+  </div>
+</section>
+
+<!-- VOCÊ SE IDENTIFICA -->
+<section class="section">
+  <div class="container">
+    <p class="label">VOCÊ SE IDENTIFICA?</p>
+    <h2 style="font-size:clamp(26px,5vw,36px);margin-block:10px 12px">A gente já viveu isso aqui.</h2>
+    <p style="color:var(--text2);font-size:15px;margin-bottom:24px">Se você se reconhecer em pelo menos 2 desses pontos, o acompanhamento foi feito pra você.</p>
+    <div class="pain-grid">
+      <div class="pain-card"><span class="pain-x">✕</span>Começa todo ano e desiste em poucas semanas</div>
+      <div class="pain-card"><span class="pain-x">✕</span>Treina há tempos mas não sai do mesmo shape</div>
+      <div class="pain-card"><span class="pain-x">✕</span>Sente dor e tem medo de piorar com o treino</div>
+      <div class="pain-card"><span class="pain-x">✕</span>Não tem tempo pra treinos longos todo dia</div>
+      <div class="pain-card"><span class="pain-x">✕</span>Já tentou ficha genérica e não evoluiu</div>
+      <div class="pain-card"><span class="pain-x">✕</span>Quer resultado mas não sabe o caminho certo</div>
+    </div>
+    <div class="quote-box" style="margin-top:24px">
+      <p>Se identificou? Então o problema não é você. É o método.</p>
+      <p class="sub">Sem plano específico pra sua rotina, qualquer pessoa desiste.</p>
+    </div>
+  </div>
+</section>
+
+<!-- SOBRE MIM -->
+<section class="section section-alt">
+  <div class="container">
+    <p class="label">SOBRE MIM</p>
+    <h2 style="font-size:clamp(26px,5vw,36px);margin-block:10px 20px">Quem é Richard Machado</h2>
+    <p style="font-size:15px;font-weight:600;margin-bottom:10px">Sou movido por resultados reais e pelo desenvolvimento de quem treina comigo.</p>
+    <p style="font-size:14px;color:var(--text2);line-height:1.7;margin-bottom:14px">Treinos personalizados para quem busca resultados de verdade. Meu objetivo é transformar seus objetivos em um plano de treinamento claro, eficiente e adaptado à sua rotina, com acompanhamento próximo durante todo o processo.</p>
+    <p style="font-size:14px;font-weight:600;color:var(--orange)">Reg. 12345678-0</p>
+    <div class="tag-list">
+      <span class="tag">💪 Musculação</span>
+      <span class="tag">🔥 Emagrecimento</span>
+      <span class="tag">📈 Hipertrofia</span>
+      <span class="tag">🏃 Condicionamento</span>
+      <span class="tag">📋 Planejamento</span>
+      <span class="tag">🤝 Acompanhamento</span>
+    </div>
+  </div>
+</section>
+
+<!-- FILOSOFIA -->
+<section class="section">
+  <div class="container">
+    <p class="label">NO QUE EU ACREDITO</p>
+    <h2 style="font-size:clamp(26px,5vw,36px);margin-block:10px 12px">A filosofia que guia o meu trabalho</h2>
+    <p style="color:var(--text2);font-size:15px;margin-bottom:4px">Não acredito em treino milagroso, resultado em 7 dias, fórmula pronta. Acredito em planejamento, constância e acompanhamento de verdade. É daqui que parte tudo que eu monto:</p>
+    <div class="phil-item">
+      <div class="phil-icon">🎯</div>
+      <div><h3>Seu objetivo merece um plano à altura.</h3><p>Nada de ficha genérica. Cada aluno tem um plano desenvolvido a partir da sua realidade, rotina e objetivo específico.</p></div>
+    </div>
+    <div class="phil-item">
+      <div class="phil-icon">📅</div>
+      <div><h3>Constância vale mais que intensidade.</h3><p>Treinar pesado uma semana e sumir não muda nada. Treinar do jeito certo, toda semana, durante meses, muda tudo.</p></div>
+    </div>
+    <div class="phil-item">
+      <div class="phil-icon">🔄</div>
+      <div><h3>O melhor treino é o que cabe na sua vida real.</h3><p>De nada adianta o plano perfeito que você não consegue cumprir. Monto pra sua rotina de verdade, com trabalho, família e cansaço.</p></div>
+    </div>
+    <div class="phil-item">
+      <div class="phil-icon">🤝</div>
+      <div><h3>Eu acompanho pessoas, não entrego ficha.</h3><p>Uma planilha você acha em qualquer lugar. O que muda o jogo é ter alguém do seu lado, ajustando e puxando quando precisa.</p></div>
+    </div>
+    <div class="quote-box" style="margin-top:24px">
+      <p>Se você sentir que isso conversa com você, a gente vai se entender.</p>
+      <p class="sub">Não trabalho pra todo mundo. Trabalho pra quem quer construir junto, com calma e com verdade.</p>
+    </div>
+  </div>
+</section>
+
+<!-- MÉTODO + HONESTIDADE -->
+<section class="section section-alt">
+  <div class="container">
+    <p class="label">O MÉTODO</p>
+    <h2 style="font-size:clamp(26px,5vw,36px);margin-block:10px 12px">Treino real, em qualquer lugar.</h2>
+    <p style="color:var(--text2);font-size:15px">Monto seu plano de acordo com a sua rotina e onde você consegue treinar:</p>
+    <div class="methods-row">
+      <div class="method-pill">🏋️ Academia</div>
+      <div class="method-pill">🏠 Em casa</div>
+      <div class="method-pill">🏢 Estúdio</div>
+    </div>
+
+    <div style="margin-top:36px">
+      <p class="label">HONESTIDADE</p>
+      <h2 style="font-size:clamp(22px,4vw,30px);margin-block:10px 0">Pra quem é (e pra quem não é)</h2>
+      <div class="for-grid">
+        <div class="for-card yes">
+          <div class="for-title"><span class="for-badge">✓</span>É pra você se...</div>
+          <ul class="for-list">
+            <li>Quer evolução de verdade, sem atalho</li>
+            <li>Tá disposto a treinar 3 a 5x por semana</li>
+            <li>Aceita seguir um plano e ajustar comigo</li>
+            <li>Quer qualidade de vida, não só estética</li>
+          </ul>
+        </div>
+        <div class="for-card no">
+          <div class="for-title"><span class="for-badge">✕</span>Não é pra você se...</div>
+          <ul class="for-list">
+            <li>Procura resultado em 7 dias, sem esforço</li>
+            <li>Não consegue treinar nenhum dia</li>
+            <li>Quer dieta milagrosa ou anabolizante</li>
+            <li>Espera o treino fazer o trabalho por você</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- O QUE VOCÊ RECEBE -->
+<section class="section">
+  <div class="container">
+    <p class="label">TUDO NUM ACOMPANHAMENTO</p>
+    <h2 style="font-size:clamp(26px,5vw,36px);margin-block:10px 20px">O que você recebe.</h2>
+    <div class="delivery-item" style="margin-top:0">
+      <div class="del-icon">🏋️</div>
+      <div><h3>Treino personalizado de acordo com seu objetivo</h3><p>Desenvolvido especificamente para você, considerando sua rotina, nível e metas.</p></div>
+    </div>
+    <div class="delivery-item">
+      <div class="del-icon">📋</div>
+      <div><h3>Planejamento estruturado e individualizado</h3><p>Um plano claro, com progressão e períodos definidos para você saber sempre o próximo passo.</p></div>
+    </div>
+    <div class="delivery-item">
+      <div class="del-icon">📈</div>
+      <div><h3>Acompanhamento da sua evolução</h3><p>Monitoramento contínuo para garantir que você está progredindo na direção certa.</p></div>
+    </div>
+    <div class="delivery-item">
+      <div class="del-icon">🔄</div>
+      <div><h3>Ajustes no treino conforme seus resultados</h3><p>Quando necessário, ajustamos o plano para continuar gerando resultados.</p></div>
+    </div>
+    <div class="delivery-item">
+      <div class="del-icon">💬</div>
+      <div><h3>Orientação e suporte durante o processo</h3><p>Disponível para tirar dúvidas e te apoiar ao longo de toda a jornada.</p></div>
+    </div>
+    <div class="delivery-item">
+      <div class="del-icon">💡</div>
+      <div><h3>Estratégias para manter constância e evolução</h3><p>Ferramentas e mentalidade para você não desistir e continuar evoluindo.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- COMO COMEÇAR -->
+<section class="section section-alt">
+  <div class="container">
+    <p class="label">COMO COMEÇAR</p>
+    <h2 style="font-size:clamp(26px,5vw,36px);margin-block:10px 20px">Em 3 passos você já tá treinando</h2>
+    <div class="step-item" style="margin-top:0">
+      <div class="step-num">1</div>
+      <div><h3>Chama no WhatsApp</h3><p>Conta seu objetivo, sua rotina e o que já tentou. Eu respondo pessoalmente.</p></div>
+    </div>
+    <div class="step-item">
+      <div class="step-num">2</div>
+      <div><h3>Avaliação + planejamento</h3><p>Você preenche uma ficha de avaliação e a gente monta o plano adequado pra você.</p></div>
+    </div>
+    <div class="step-item">
+      <div class="step-num">3</div>
+      <div><h3>Treino pronto em até 48h</h3><p>Plano pronto pra você começar a treinar com propósito e acompanhamento real.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- DEPOIMENTOS -->
+<section class="section">
+  <div class="container">
+    <p class="label">DEPOIMENTOS</p>
+    <h2 style="font-size:clamp(26px,5vw,36px);margin-block:10px 20px">O que os alunos dizem</h2>
+    <div class="test-card">
+      <div class="test-header">
+        <div class="test-av" style="background:#7c3aed">JM</div>
+        <div>
+          <div class="test-name">Júlia M. <span style="color:var(--text3);font-weight:400">· 32 anos</span></div>
+          <div class="test-badge">🏆 Perdeu 8kg em 3 meses</div>
+        </div>
+        <span class="stars" style="margin-left:auto">★★★★★</span>
+      </div>
+      <p class="test-quote">"Em 3 meses voltei a me sentir bem no meu corpo. O Richard respeitou meu tempo e minha rotina. Nunca achei que conseguiria manter a constância, mas com o acompanhamento ficou muito mais fácil."</p>
+      <p class="test-plan">PLANO TRIMESTRAL</p>
+    </div>
+    <div class="test-card">
+      <div class="test-header">
+        <div class="test-av" style="background:#0ea5e9">TF</div>
+        <div>
+          <div class="test-name">Thiago F. <span style="color:var(--text3);font-weight:400">· 34 anos</span></div>
+          <div class="test-badge">💪 Ganhou massa e definição</div>
+        </div>
+        <span class="stars" style="margin-left:auto">★★★★★</span>
+      </div>
+      <p class="test-quote">"Treinava na academia há anos sem resultado. Com um plano feito pra mim, em 4 meses evoluí mais do que em 2 anos treinando sozinho. O acompanhamento faz toda a diferença."</p>
+      <p class="test-plan">PLANO SEMESTRAL</p>
+    </div>
+    <div class="test-card">
+      <div class="test-header">
+        <div class="test-av" style="background:#16a34a">RS</div>
+        <div>
+          <div class="test-name">Rafaela S. <span style="color:var(--text3);font-weight:400">· 28 anos</span></div>
+          <div class="test-badge">⚡ Começou do zero</div>
+        </div>
+        <span class="stars" style="margin-left:auto">★★★★★</span>
+      </div>
+      <p class="test-quote">"Nunca tinha treinado na vida e sempre tive medo. O Richard me deu um plano pra treinar em casa no começo, sem pressão. Hoje treino com confiança e me sinto muito melhor."</p>
+      <p class="test-plan">PLANO MENSAL</p>
+    </div>
+  </div>
+</section>
+
+<!-- INSTAGRAM -->
+<section class="section section-alt">
+  <div class="container">
+    <p class="label">INSTAGRAM</p>
+    <h2 style="font-size:clamp(24px,5vw,34px);margin-block:10px 12px">Me segue no Instagram</h2>
+    <p style="color:var(--text2);font-size:15px">Dicas de treino, evolução de alunos e conteúdo pra quem quer começar ou melhorar. É de lá que sai muito conteúdo gratuito.</p>
+    <a href="https://instagram.com/richard_n_machado" target="_blank" rel="noopener" class="insta-btn">📷 @richard_n_machado</a>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section">
+  <div class="container">
+    <p class="label">DÚVIDAS FREQUENTES</p>
+    <h2 style="font-size:clamp(26px,5vw,36px);margin-block:10px 8px">Perguntas mais comuns</h2>
+    <p style="color:var(--text2);font-size:14px;margin-bottom:20px">Se sua dúvida não está aqui, me chama no WhatsApp.</p>
+    <div id="faq">
+      <div class="faq-item">
+        <button class="faq-trigger">Preciso treinar quantas vezes por semana?<span class="faq-chev">▾</span></button>
+        <div class="faq-answer">O ideal é de 3 a 5 vezes por semana, mas o plano é montado de acordo com a sua disponibilidade real. Não adianta montar um plano que você não vai conseguir cumprir.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-trigger">Posso treinar em casa ou só na academia?<span class="faq-chev">▾</span></button>
+        <div class="faq-answer">Você pode treinar em casa, na academia ou no estúdio. O plano é adaptado ao local e equipamentos que você tem disponível.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-trigger">Como funciona o acompanhamento?<span class="faq-chev">▾</span></button>
+        <div class="faq-answer">Todo o acompanhamento é feito via WhatsApp. Você tira dúvidas, manda feedbacks e eu ajusto o plano sempre que necessário ao longo do período contratado.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-trigger">E se eu não souber executar um exercício?<span class="faq-chev">▾</span></button>
+        <div class="faq-answer">O plano vem com descrição dos exercícios e orientações de execução. Se precisar, a gente resolve via WhatsApp com vídeo ou explicação detalhada.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-trigger">Tem chamada de vídeo com você?<span class="faq-chev">▾</span></button>
+        <div class="faq-answer">No plano semestral está incluso chamada de vídeo para avaliação e acompanhamento. Para os demais planos, pode ser combinado conforme necessidade.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section style="padding-block:32px">
+  <div class="container">
+    <div class="final-cta">
+      <p class="label">VAMOS CONVERSAR</p>
+      <h2>Está pronto para começar?</h2>
+      <p>Não importa se você está começando agora ou já treina há algum tempo. O próximo passo é ter um planejamento adequado aos seus objetivos. Entre em contato pelo WhatsApp e escolha o plano ideal para você.</p>
+      <a href="https://wa.me/5542991804793" target="_blank" rel="noopener" class="btn-dark">💬 Próximo passo</a>
+    </div>
+  </div>
+</section>
+
+<!-- PLANOS -->
+<section class="section section-alt" id="planos">
+  <div class="container">
+    <p class="label">PLANOS</p>
+    <h2 style="font-size:clamp(26px,5vw,36px);margin-block:10px 8px">Escolhe como quer evoluir.</h2>
+    <p style="color:var(--text2);font-size:14px;margin-bottom:4px">Tudo via WhatsApp. Sem fidelidade. Sem pegadinha.</p>
+
+    <div class="plan-card">
+      <div class="plan-label">🔁 MENSAL</div>
+      <div class="plan-price"><span class="cur">R$</span><span class="amt">1.000</span><span class="per">/ mês</span></div>
+      <p class="plan-note">Sem fidelidade · cancela quando quiser</p>
+      <p class="plan-desc">Para quem quer começar com acompanhamento personalizado e conhecer o método de trabalho.</p>
+      <ul class="plan-feats">
+        <li>Treino 100% personalizado</li>
+        <li>Planejamento estruturado e individualizado</li>
+        <li>Acompanhamento da sua evolução</li>
+        <li>Ajustes no treino conforme seus resultados</li>
+        <li>Suporte via WhatsApp</li>
+      </ul>
+      <a href="https://wa.me/5542991804793?text=Oi%20Richard!%20Quero%20saber%20mais%20sobre%20o%20plano%20mensal." target="_blank" rel="noopener" class="btn-plan">Garantir minha vaga</a>
+    </div>
+
+    <div class="plan-card">
+      <div class="plan-label">🏆 TRIMESTRAL</div>
+      <div class="plan-price"><span class="cur">R$</span><span class="amt">1.000</span><span class="per">/ 3 meses</span></div>
+      <p class="plan-note">em até 3x sem juros</p>
+      <p class="plan-desc">Para quem busca mais consistência e tempo suficiente para acompanhar sua evolução.</p>
+      <ul class="plan-feats">
+        <li>Treino 100% personalizado</li>
+        <li>Planejamento estruturado e individualizado</li>
+        <li>Acompanhamento da sua evolução</li>
+        <li>Ajustes no treino conforme seus resultados</li>
+        <li>Suporte via WhatsApp</li>
+      </ul>
+      <a href="https://wa.me/5542991804793?text=Oi%20Richard!%20Quero%20saber%20mais%20sobre%20o%20plano%20trimestral." target="_blank" rel="noopener" class="btn-plan">Garantir minha vaga</a>
+    </div>
+
+    <div class="plan-card featured">
+      <div class="plan-badge">MAIS POPULAR</div>
+      <div class="plan-label" style="margin-top:12px">⭐ SEMESTRAL</div>
+      <p style="font-size:12px;color:var(--orange);margin-bottom:6px">🔥 Mais vendido, poucas vagas</p>
+      <div class="plan-price"><span class="cur">R$</span><span class="amt">1.000</span><span class="per">/ 6 meses</span></div>
+      <p class="plan-note">em até 6x sem juros</p>
+      <p class="plan-desc">Para quem está comprometido com um projeto de evolução a longo prazo, com acompanhamento contínuo e ajustes durante todo o período.</p>
+      <ul class="plan-feats">
+        <li>Treino 100% personalizado</li>
+        <li>Planejamento estruturado e individualizado</li>
+        <li>Acompanhamento da sua evolução</li>
+        <li>Ajustes no treino conforme seus resultados</li>
+        <li>Suporte via WhatsApp</li>
+        <li>Chamada de vídeo quando precisar</li>
+      </ul>
+      <a href="https://wa.me/5542991804793?text=Oi%20Richard!%20Quero%20saber%20mais%20sobre%20o%20plano%20semestral." target="_blank" rel="noopener" class="btn-plan">Garantir minha vaga</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <p>© 2026 Richard Nunes Machado · Personal Trainer · Reg. 12345678-0</p>
+    <p style="margin-top:6px">
+      <a href="https://wa.me/5542991804793" target="_blank">WhatsApp</a> ·
+      <a href="https://instagram.com/richard_n_machado" target="_blank">Instagram</a>
+    </p>
+  </div>
+</footer>
+
+<script>
+document.querySelectorAll('.faq-trigger').forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    const item=btn.closest('.faq-item');
+    const wasOpen=item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i=>i.classList.remove('open'));
+    if(!wasOpen)item.classList.add('open');
+  });
+});
+const plansLink=document.querySelector('[href="#planos"]');
+if(plansLink){
+  plansLink.addEventListener('click',e=>{
+    e.preventDefault();
+    document.getElementById('planos').scrollIntoView({behavior:'smooth'});
+  });
+}
+</script>
