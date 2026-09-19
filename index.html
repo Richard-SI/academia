@@ -37,10 +37,16 @@ h1,h2,h3,.display{font-family:'Archivo',sans-serif;text-wrap:balance;line-height
 .topbar{background:var(--bg2);border-bottom:1px solid var(--border);padding:9px 20px;text-align:center;font-size:12px;color:var(--text2);display:flex;align-items:center;justify-content:center;gap:20px;flex-wrap:wrap}
 
 /* HERO */
-.hero{padding-block:64px 56px;position:relative;overflow:hidden}
-.hero::before{content:'';position:absolute;top:-100px;right:-100px;width:400px;height:400px;background:radial-gradient(circle,color-mix(in srgb,var(--accent) 12%,transparent) 0%,transparent 70%);pointer-events:none}
-.hero-photo{position:absolute;right:-20px;top:0;bottom:0;width:200px;object-fit:cover;object-position:top;opacity:.25;pointer-events:none;mask-image:linear-gradient(to left,rgba(0,0,0,.6) 0%,transparent 100%);-webkit-mask-image:linear-gradient(to left,rgba(0,0,0,.6) 0%,transparent 100%)}
-@media(min-width:440px){.hero-photo{opacity:.35;width:220px}}
+.hero{padding-block:0;position:relative;overflow:hidden}
+.hero-inner{max-width:680px;margin-inline:auto;padding-inline:20px;display:grid;grid-template-columns:1fr 260px;gap:0;align-items:stretch;min-height:580px}
+.hero-content{padding-block:64px 56px;display:flex;flex-direction:column;justify-content:center}
+.hero-photo{width:100%;height:100%;object-fit:cover;object-position:top center;display:block;border-radius:0}
+.hero-photo-wrap{position:relative;overflow:hidden;margin-left:32px;border-radius:0 0 20px 20px;align-self:stretch}
+@media(max-width:560px){
+  .hero-inner{grid-template-columns:1fr;min-height:auto}
+  .hero-photo-wrap{order:-1;margin-left:0;height:300px;border-radius:0}
+  .hero-content{padding-block:32px 48px}
+}
 .hero-tag{display:inline-flex;align-items:center;gap:6px;padding:5px 12px;border-radius:50px;border:1px solid color-mix(in srgb,var(--accent) 35%,transparent);background:color-mix(in srgb,var(--accent) 25%,transparent);margin-bottom:20px}
 .hero-tag .dot{width:6px;height:6px;border-radius:50%;background:var(--accent)}
 .hero-headline{font-family:'Archivo',sans-serif;font-size:clamp(36px,8vw,52px);font-weight:700;line-height:1.05;margin-bottom:20px}
@@ -217,23 +223,23 @@ h1,h2,h3,.display{font-family:'Archivo',sans-serif;text-wrap:balance;line-height
 
 <!-- TOPBAR -->
 <div class="topbar">
-  <span>🏋️ CREF 012345-G/SC · Profissional registrado</span>
-  <span>❤️ Saúde antes da estética</span>
+  <span>🎓 Bacharel em Educação Física</span>
+  <span>🏋️ Cinesiologia do exercício e fisiologia</span>
 </div>
 
 <!-- HERO -->
 <section class="hero">
-  <img src="https://www.darlisxavier.com.br/assets/img/darlis-retrato.jpg" alt="Darlis Xavier" class="hero-photo" loading="eager" aria-hidden="true">
-  <div class="container">
+  <div class="hero-inner">
+  <div class="hero-content">
     <div class="hero-tag">
       <span class="dot"></span>
       <span class="label" style="font-size:11px">Darlis Xavier · Personal Trainer</span>
     </div>
     <h1 class="hero-headline">
-      Seu objetivo.<br>Seu treino.<br><span class="accent">Seus resultados.</span>
+      Transforme seu corpo.<br>Recupere sua capacidade.<br><span class="accent">Viva melhor.</span>
     </h1>
     <p class="hero-desc">
-      Chega de treinar sem saber se está no caminho certo. Com um planejamento personalizado, você terá um treino desenvolvido de acordo com seus objetivos, sua rotina e seu nível atual, além de acompanhamento para evoluir de forma consistente.
+      Ajudo pessoas a conquistarem um corpo mais forte, saudável e funcional, através de um treinamento pensado. Combinando reabilitação, hipertrofia, emagrecimento e performance — respeitando as necessidades e limitações de cada pessoa.
     </p>
     <div class="social-proof">
       <div class="avatars">
@@ -244,29 +250,33 @@ h1,h2,h3,.display{font-family:'Archivo',sans-serif;text-wrap:balance;line-height
       </div>
       <div class="proof-text">
         <span class="stars">★★★★★ 4.9</span>
-        <span>+60 pessoas construindo rotina comigo</span>
+        <span>+60 alunos transformados</span>
       </div>
     </div>
     <div class="cta-group">
-      <a href="https://wa.me/5548988489337" target="_blank" rel="noopener" class="btn-primary">💬 Conversar com a Darlis</a>
-      <p class="reply-note">ℹ️ Eu respondo pessoalmente, normalmente em até 4h</p>
-      <a href="#planos" class="btn-secondary">↓ Conheça os planos</a>
+      <a href="https://wa.me/5548988489337" target="_blank" rel="noopener" class="btn-primary">Contratar consultoria</a>
+      <p class="reply-note">Avaliação online ou presencial</p>
+      <a href="#planos" class="btn-secondary">Quero te apresentar meu trabalho</a>
     </div>
     <div class="badges-bar">
-      <div class="badge-item"><div class="badge-icon">⏱️</div> Poucos minutos por dia</div>
-      <div class="badge-item"><div class="badge-icon">📅</div> 3 a 5x por semana</div>
-      <div class="badge-item"><div class="badge-icon">🍎</div> Orientação nutricional</div>
+      <div class="badge-item"><div class="badge-icon">📊</div> Avaliação completa</div>
+      <div class="badge-item"><div class="badge-icon">🎯</div> Treino individualizado</div>
+      <div class="badge-item"><div class="badge-icon">📈</div> Periodização</div>
       <div class="badge-item"><div class="badge-icon">📱</div> Suporte via WhatsApp</div>
     </div>
+  </div><!-- hero-content -->
+  <div class="hero-photo-wrap">
+    <img src="https://www.darlisxavier.com.br/assets/img/darlis-retrato.jpg" alt="Darlis Xavier" class="hero-photo" loading="eager">
   </div>
+  </div><!-- hero-inner -->
 </section>
 
 <!-- PRA QUEM É -->
 <section class="section section-alt">
   <div class="container">
     <p class="label">PRA QUEM É</p>
-    <h2 style="font-size:clamp(28px,6vw,40px);margin-block:10px 12px">Pra quem quer reencontrar o próprio ritmo.</h2>
-    <p style="color:var(--text2);font-size:15px;margin-bottom:24px">Esse espaço é seu, principalmente se você já tentou treinar mas não saiu do lugar. Aqui a gente começa do ponto certo, com um plano feito para você:</p>
+    <h2 style="font-size:clamp(28px,6vw,40px);margin-block:10px 12px">Um corpo resistente, ágil e preparado para o dia a dia.</h2>
+    <p style="color:var(--text2);font-size:15px;margin-bottom:24px">Na consultoria você vai conhecer um método que acredita em um corpo forte e eficiente, integrando todas as capacidades neuromusculares — potência, flexibilidade, força, elasticidade.</p>
     <div>
       <div class="accordion-item"><button class="accordion-trigger"><span class="acc-icon">❤️</span>Você que treina mas não vê resultado</button></div>
       <div class="accordion-item"><button class="accordion-trigger"><span class="acc-icon">❤️</span>Você que não sabe por onde começar</button></div>
@@ -276,10 +286,9 @@ h1,h2,h3,.display{font-family:'Archivo',sans-serif;text-wrap:balance;line-height
       <div class="accordion-item"><button class="accordion-trigger"><span class="acc-icon">❤️</span>Você que quer mudar o corpo mas, principalmente, quer se sentir bem de novo</button></div>
     </div>
     <div class="quote-box">
-      <p>Não importa de onde você está saindo. Importa pra onde a gente vai.</p>
-      <p class="sub">Aqui ninguém julga. A gente começa do seu nível, no seu ritmo, e constrói junto.</p>
+      <p>Sem fórmulas prontas e sem atalhos — apenas um olhar individualizado, conhecimento e acompanhamento próximo.</p>
     </div>
-    <a href="https://wa.me/5548988489337" target="_blank" rel="noopener" class="btn-primary">💬 Quero falar com a Darlis</a>
+    <a href="https://wa.me/5548988489337" target="_blank" rel="noopener" class="btn-primary">Ver como funciona a consultoria</a>
   </div>
 </section>
 
@@ -287,8 +296,8 @@ h1,h2,h3,.display{font-family:'Archivo',sans-serif;text-wrap:balance;line-height
 <section class="section">
   <div class="container">
     <p class="label">VOCÊ SE IDENTIFICA?</p>
-    <h2 style="font-size:clamp(26px,5vw,36px);margin-block:10px 12px">A gente já viveu isso aqui.</h2>
-    <p style="color:var(--text2);font-size:15px;margin-bottom:24px">Se você se reconhecer em pelo menos 2 desses pontos, o acompanhamento foi feito pra você.</p>
+    <h2 style="font-size:clamp(26px,5vw,36px);margin-block:10px 12px">O problema não é você — é o método.</h2>
+    <p style="color:var(--text2);font-size:15px;margin-bottom:24px">Sem um plano específico para a sua rotina, qualquer pessoa trava. Veja se você se reconhece em algum desses pontos:</p>
     <div class="pain-grid">
       <div class="pain-card"><span class="pain-x">✕</span>Começa todo ano e desiste em poucas semanas</div>
       <div class="pain-card"><span class="pain-x">✕</span>Treina há tempos mas não sai do mesmo shape</div>
@@ -312,18 +321,18 @@ h1,h2,h3,.display{font-family:'Archivo',sans-serif;text-wrap:balance;line-height
     <div class="trainer-wrap">
       <img src="https://www.darlisxavier.com.br/assets/img/darlis-sobre.jpg" alt="Darlis Xavier" class="trainer-photo">
       <div>
-    <p style="font-size:15px;font-weight:600;margin-bottom:10px">Sou movido por resultados reais e pelo desenvolvimento de quem treina comigo.</p>
-    <p style="font-size:14px;color:var(--text2);line-height:1.7;margin-bottom:14px">Treinos personalizados para quem busca resultados de verdade. Meu objetivo é transformar seus objetivos em um plano de treinamento claro, eficiente e adaptado à sua rotina, com acompanhamento próximo durante todo o processo.</p>
-    <p style="font-size:14px;font-weight:600;color:var(--fumo)">CREF 012345-G/SC</p>
+    <p style="font-size:15px;font-weight:600;margin-bottom:10px">Meu trabalho combina reabilitação, hipertrofia, emagrecimento e performance, respeitando as necessidades e limitações de cada pessoa.</p>
+    <p style="font-size:14px;color:var(--text2);line-height:1.7;margin-bottom:14px">Sem fórmulas prontas e sem atalhos — apenas um olhar individualizado, conhecimento e acompanhamento próximo, com o exercício como ferramenta para transformar não só a estética, mas a funcionalidade.</p>
+    <p style="font-size:14px;color:var(--text2);line-height:1.7;margin-bottom:14px">Meu método é baseado em cinesiologia do exercício e fisiologia, respeitando as diferentes fases e necessidades do treinamento. Uso periodização, individualidade e progressão para construir estratégias que tornem cada treino o mais funcional, seguro e adequado possível.</p>
       </div>
     </div>
     <div class="tag-list">
-      <span class="tag">💪 Musculação</span>
-      <span class="tag">🔥 Emagrecimento</span>
-      <span class="tag">📈 Hipertrofia</span>
-      <span class="tag">🏃 Condicionamento</span>
-      <span class="tag">📋 Planejamento</span>
-      <span class="tag">🤝 Acompanhamento</span>
+      <span class="tag">🎓 Bacharel em Educação Física</span>
+      <span class="tag">🏋️ Performance esportiva</span>
+      <span class="tag">🔬 Cinesiologia e fisiologia</span>
+      <span class="tag">🩺 Reabilitação de lesões</span>
+      <span class="tag">📊 Periodização</span>
+      <span class="tag">💪 Hipertrofia e emagrecimento</span>
     </div>
   </div>
 </section>
@@ -331,28 +340,23 @@ h1,h2,h3,.display{font-family:'Archivo',sans-serif;text-wrap:balance;line-height
 <!-- FILOSOFIA -->
 <section class="section">
   <div class="container">
-    <p class="label">NO QUE EU ACREDITO</p>
-    <h2 style="font-size:clamp(26px,5vw,36px);margin-block:10px 12px">A filosofia que guia o meu trabalho</h2>
-    <p style="color:var(--text2);font-size:15px;margin-bottom:4px">Não acredito em treino milagroso, resultado em 7 dias, fórmula pronta. Acredito em planejamento, constância e acompanhamento de verdade. É daqui que parte tudo que eu monto:</p>
+    <p class="label">MEUS TRÊS PILARES</p>
+    <h2 style="font-size:clamp(26px,5vw,36px);margin-block:10px 12px">A base de tudo que faço</h2>
+    <p style="color:var(--text2);font-size:15px;margin-bottom:4px">Três pilares que sustentam o meu trabalho e guiam cada treino que monto:</p>
     <div class="phil-item">
-      <div class="phil-icon">🎯</div>
-      <div><h3>Seu objetivo merece um plano à altura.</h3><p>Nada de ficha genérica. Cada aluno tem um plano desenvolvido a partir da sua realidade, rotina e objetivo específico.</p></div>
+      <div class="phil-icon">⚙️</div>
+      <div><h3>Técnica</h3><p>Cada movimento tem um propósito. Busco desenvolver uma execução eficiente, com controle, consciência corporal e atenção aos detalhes, respeitando a individualidade e as necessidades de cada pessoa.</p></div>
     </div>
     <div class="phil-item">
-      <div class="phil-icon">📅</div>
-      <div><h3>Constância vale mais que intensidade.</h3><p>Treinar pesado uma semana e sumir não muda nada. Treinar do jeito certo, toda semana, durante meses, muda tudo.</p></div>
+      <div class="phil-icon">🌱</div>
+      <div><h3>Longevidade</h3><p>Treinar não é apenas buscar resultados no presente, mas construir um corpo capaz de se movimentar, evoluir e permanecer saudável ao longo dos anos. Meu objetivo é que o exercício faça parte da sua vida de forma sustentável.</p></div>
     </div>
     <div class="phil-item">
-      <div class="phil-icon">🔄</div>
-      <div><h3>O melhor treino é o que cabe na sua vida real.</h3><p>De nada adianta o plano perfeito que você não consegue cumprir. Monto pra sua rotina de verdade, com trabalho, família e cansaço.</p></div>
-    </div>
-    <div class="phil-item">
-      <div class="phil-icon">🤝</div>
-      <div><h3>Eu acompanho pessoas, não entrego ficha.</h3><p>Uma planilha você acha em qualquer lugar. O que muda o jogo é ter alguém do seu lado, ajustando e puxando quando precisa.</p></div>
+      <div class="phil-icon">🧠</div>
+      <div><h3>Treino inteligente</h3><p>Não acredito em fórmulas. O treinamento precisa ser estratégico e baseado em princípios de cinesiologia e fisiologia, considerando objetivo, histórico, rotina, limitações e o momento de cada pessoa.</p></div>
     </div>
     <div class="quote-box" style="margin-top:24px">
-      <p>Se você sentir que isso conversa com você, a gente vai se entender.</p>
-      <p class="sub">Não trabalho pra todo mundo. Trabalho pra quem quer construir junto, com calma e com verdade.</p>
+      <p>Treinar melhor não é fazer mais. É fazer o que precisa ser feito, da maneira certa e pelo tempo necessário para continuar evoluindo.</p>
     </div>
   </div>
 </section>
@@ -361,8 +365,8 @@ h1,h2,h3,.display{font-family:'Archivo',sans-serif;text-wrap:balance;line-height
 <section class="section section-alt">
   <div class="container">
     <p class="label">O MÉTODO</p>
-    <h2 style="font-size:clamp(26px,5vw,36px);margin-block:10px 12px">Treino real, em qualquer lugar.</h2>
-    <p style="color:var(--text2);font-size:15px">Monto seu plano de acordo com a sua rotina e onde você consegue treinar:</p>
+    <h2 style="font-size:clamp(26px,5vw,36px);margin-block:10px 12px">O que você encontra na minha metodologia</h2>
+    <p style="color:var(--text2);font-size:15px">Seis frentes de trabalho que sustentam o treino do começo ao fim — da primeira medida até o ajuste que mantém sua evolução.</p>
     <div class="methods-row">
       <div class="method-pill"><span class="m-icon">🏋️</span>Academia</div>
       <div class="method-pill"><span class="m-icon">🏠</span>Em casa</div>
@@ -399,31 +403,31 @@ h1,h2,h3,.display{font-family:'Archivo',sans-serif;text-wrap:balance;line-height
 <!-- O QUE VOCÊ RECEBE -->
 <section class="section">
   <div class="container">
-    <p class="label">TUDO NUM ACOMPANHAMENTO</p>
-    <h2 style="font-size:clamp(26px,5vw,36px);margin-block:10px 20px">O que você recebe.</h2>
+    <p class="label">METODOLOGIA</p>
+    <h2 style="font-size:clamp(26px,5vw,36px);margin-block:10px 20px">O que você encontra na consultoria</h2>
     <div class="delivery-item" style="margin-top:0">
-      <div class="del-icon">🏋️</div>
-      <div><h3>Treino personalizado de acordo com seu objetivo</h3><p>Desenvolvido especificamente para você, considerando sua rotina, nível e metas.</p></div>
+      <div class="del-icon">📊</div>
+      <div><h3>Avaliação completa</h3><p>Avaliação online ou presencial, com análise postural, medidas corporais, dobras cutâneas e estimativa do percentual de gordura, permitindo acompanhar sua evolução de forma objetiva.</p></div>
     </div>
     <div class="delivery-item">
-      <div class="del-icon">📋</div>
-      <div><h3>Planejamento estruturado e individualizado</h3><p>Um plano claro, com progressão e períodos definidos para você saber sempre o próximo passo.</p></div>
+      <div class="del-icon">🎯</div>
+      <div><h3>Prescrição individualizada</h3><p>Treinos montados de acordo com seu objetivo, nível de treinamento, limitações, rotina e necessidades individuais, respeitando cada fase do processo.</p></div>
     </div>
     <div class="delivery-item">
       <div class="del-icon">📈</div>
-      <div><h3>Acompanhamento da sua evolução</h3><p>Monitoramento contínuo para garantir que você está progredindo na direção certa.</p></div>
-    </div>
-    <div class="delivery-item">
-      <div class="del-icon">🔄</div>
-      <div><h3>Ajustes no treino conforme seus resultados</h3><p>Quando necessário, ajustamos o plano para continuar gerando resultados.</p></div>
+      <div><h3>Periodização e progressão</h3><p>Planejamento estruturado das fases do treinamento, com ajustes de volume, intensidade e exercícios para garantir evolução contínua e sustentável.</p></div>
     </div>
     <div class="delivery-item">
       <div class="del-icon">💬</div>
-      <div><h3>Orientação e suporte durante o processo</h3><p>Disponível para tirar dúvidas e te apoiar ao longo de toda a jornada.</p></div>
+      <div><h3>Acompanhamento próximo pelo WhatsApp</h3><p>Suporte individual através de vídeos explicativos, áudios, orientações e correções em tempo real, mantendo você acompanhado durante todo o processo.</p></div>
     </div>
     <div class="delivery-item">
-      <div class="del-icon">💡</div>
-      <div><h3>Estratégias para manter constância e evolução</h3><p>Ferramentas e mentalidade para você não desistir e continuar evoluindo.</p></div>
+      <div class="del-icon">🔍</div>
+      <div><h3>Correção e aprimoramento dos exercícios</h3><p>Análise detalhada da execução para ajustar técnica, amplitude, controle, postura e detalhes do movimento, tornando o treinamento mais seguro e eficiente.</p></div>
+    </div>
+    <div class="delivery-item">
+      <div class="del-icon">🔄</div>
+      <div><h3>Reavaliações e ajustes</h3><p>O planejamento não é engessado. A partir da sua evolução e dos seus feedbacks, faço ajustes constantes no treinamento para manter o processo alinhado ao seu objetivo.</p></div>
     </div>
   </div>
 </section>
@@ -432,18 +436,18 @@ h1,h2,h3,.display{font-family:'Archivo',sans-serif;text-wrap:balance;line-height
 <section class="section section-alt">
   <div class="container">
     <p class="label">COMO COMEÇAR</p>
-    <h2 style="font-size:clamp(26px,5vw,36px);margin-block:10px 20px">Em 3 passos você já tá treinando</h2>
+    <h2 style="font-size:clamp(26px,5vw,36px);margin-block:10px 20px">Como funciona a consultoria</h2>
     <div class="step-item" style="margin-top:0">
       <div class="step-num">1</div>
-      <div><h3>Chama no WhatsApp</h3><p>Conta seu objetivo, sua rotina e o que já tentou. Eu respondo pessoalmente.</p></div>
+      <div><h3>Entre em contato</h3><p>Me chama no WhatsApp. Conta seu objetivo, sua rotina e o que já tentou. Eu respondo pessoalmente.</p></div>
     </div>
     <div class="step-item">
       <div class="step-num">2</div>
-      <div><h3>Avaliação + planejamento</h3><p>Você preenche uma ficha de avaliação e a gente monta o plano adequado pra você.</p></div>
+      <div><h3>Avaliação</h3><p>Realizamos uma avaliação online ou presencial, com análise postural, medidas corporais e dobras cutâneas para traçar o ponto de partida.</p></div>
     </div>
     <div class="step-item">
       <div class="step-num">3</div>
-      <div><h3>Treino pronto em até 48h</h3><p>Plano pronto pra você começar a treinar com propósito e acompanhamento real.</p></div>
+      <div><h3>Prescrição e acompanhamento</h3><p>Treino personalizado, periodização e suporte contínuo pelo WhatsApp para você evoluir com segurança.</p></div>
     </div>
   </div>
 </section>
@@ -545,9 +549,9 @@ h1,h2,h3,.display{font-family:'Archivo',sans-serif;text-wrap:balance;line-height
 <section style="padding-block:32px">
   <div class="container">
     <div class="final-cta">
-      <p class="label">VAMOS CONVERSAR</p>
-      <h2>Está pronto para começar?</h2>
-      <p>Não importa se você está começando agora ou já treina há algum tempo. O próximo passo é ter um planejamento adequado aos seus objetivos. Entre em contato pelo WhatsApp e escolha o plano ideal para você.</p>
+      <p class="label">CONSULTORIA</p>
+      <h2>Pronto para transformar seu corpo?</h2>
+      <p>Avaliação online ou presencial. Um treino pensado para você, com acompanhamento próximo e ajustes constantes para garantir evolução real.</p>
       <a href="https://wa.me/5548988489337" target="_blank" rel="noopener" class="btn-dark">💬 Próximo passo</a>
     </div>
   </div>
@@ -613,7 +617,7 @@ h1,h2,h3,.display{font-family:'Archivo',sans-serif;text-wrap:balance;line-height
 <!-- FOOTER -->
 <footer class="footer">
   <div class="container">
-    <p>© 2026 Darlis Xavier · Personal Trainer · CREF 012345-G/SC</p>
+    <p>© 2026 Darlis Xavier · Personal Trainer</p>
     <p style="margin-top:6px">
       <a href="https://wa.me/5548988489337" target="_blank">WhatsApp</a> ·
       <a href="https://instagram.com/darlisxavier" target="_blank">Instagram</a>
