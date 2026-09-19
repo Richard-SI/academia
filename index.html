@@ -171,6 +171,18 @@ h1,h2,h3,.display{font-family:'Oswald',sans-serif;text-wrap:balance;line-height:
   .nav-name{display:none}
 }
 @media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+
+/* IMAGES */
+.hero-img-wrap{margin-top:36px;border-radius:16px;overflow:hidden;border:1px solid var(--border);position:relative}
+.hero-img{width:100%;height:260px;object-fit:cover;display:block;filter:brightness(.85)}
+.hero-img-overlay{position:absolute;inset:0;background:linear-gradient(to top,var(--bg) 0%,transparent 50%);pointer-events:none}
+
+.trainer-wrap{margin-bottom:24px;display:flex;gap:16px;align-items:flex-start}
+.trainer-photo{width:110px;height:140px;object-fit:cover;border-radius:12px;border:2px solid var(--border);flex-shrink:0}
+
+.insta-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin-top:20px;border-radius:12px;overflow:hidden}
+.insta-grid img{width:100%;aspect-ratio:1;object-fit:cover;display:block;transition:opacity .2s}
+.insta-grid img:hover{opacity:.85}
 </style>
 
 <!-- NAV -->
@@ -284,9 +296,14 @@ h1,h2,h3,.display{font-family:'Oswald',sans-serif;text-wrap:balance;line-height:
   <div class="container">
     <p class="label">SOBRE MIM</p>
     <h2 style="font-size:clamp(26px,5vw,36px);margin-block:10px 20px">Quem é Richard Machado</h2>
+    <div class="trainer-wrap">
+      <img src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?w=300&auto=format&fit=crop&q=80" alt="Richard Machado Personal Trainer" class="trainer-photo">
+      <div>
     <p style="font-size:15px;font-weight:600;margin-bottom:10px">Sou movido por resultados reais e pelo desenvolvimento de quem treina comigo.</p>
     <p style="font-size:14px;color:var(--text2);line-height:1.7;margin-bottom:14px">Treinos personalizados para quem busca resultados de verdade. Meu objetivo é transformar seus objetivos em um plano de treinamento claro, eficiente e adaptado à sua rotina, com acompanhamento próximo durante todo o processo.</p>
     <p style="font-size:14px;font-weight:600;color:var(--orange)">Reg. 12345678-0</p>
+      </div>
+    </div>
     <div class="tag-list">
       <span class="tag">💪 Musculação</span>
       <span class="tag">🔥 Emagrecimento</span>
@@ -468,6 +485,14 @@ h1,h2,h3,.display{font-family:'Oswald',sans-serif;text-wrap:balance;line-height:
     <p class="label">INSTAGRAM</p>
     <h2 style="font-size:clamp(24px,5vw,34px);margin-block:10px 12px">Me segue no Instagram</h2>
     <p style="color:var(--text2);font-size:15px">Dicas de treino, evolução de alunos e conteúdo pra quem quer começar ou melhorar. É de lá que sai muito conteúdo gratuito.</p>
+    <div class="insta-grid">
+      <img src="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?w=300&auto=format&fit=crop&q=75" alt="Treino" loading="lazy">
+      <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=300&auto=format&fit=crop&q=75" alt="Musculação" loading="lazy">
+      <img src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?w=300&auto=format&fit=crop&q=75" alt="Personal" loading="lazy">
+      <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=300&auto=format&fit=crop&q=75" alt="Treino funcional" loading="lazy">
+      <img src="https://images.unsplash.com/photo-1526506118085-60ce8714f8c5?w=300&auto=format&fit=crop&q=75" alt="Emagrecimento" loading="lazy">
+      <img src="https://images.unsplash.com/photo-1549060279-7e168fcee0c2?w=300&auto=format&fit=crop&q=75" alt="Academia" loading="lazy">
+    </div>
     <a href="https://instagram.com/richard_n_machado" target="_blank" rel="noopener" class="insta-btn">📷 @richard_n_machado</a>
   </div>
 </section>
