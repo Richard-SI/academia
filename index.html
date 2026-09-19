@@ -1,14 +1,23 @@
-<title>Richard Machado · Personal</title>
+<title>Darlis Xavier | Personal Trainer</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,75..125,100..900;1,75..125,100..900&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
 <style>
-:root{--bg:#0c0c0c;--bg2:#141414;--bg3:#1a1a1a;--surface:#1e1e1e;--surface2:#252525;--border:#2a2a2a;--orange:#f97316;--orange-lt:#fb923c;--text:#f0f0f0;--text2:#a0a0a0;--text3:#6b6b6b;--green:#22c55e;--red:#ef4444;--radius:12px}
+:root{
+  --bg:#F7F3EC;--bg2:#EFE8DC;--bg3:#DCD1BE;
+  --surface:#FFFFFF;--surface2:#F7F3EC;--border:#DCD1BE;
+  --orange:#3F362A;--orange-lt:#6E6353;
+  --accent:#E8B98A;--accent-lt:#f0cda8;
+  --text:#2A241C;--text2:#6E6353;--text3:#9e9080;
+  --green:#22c55e;--red:#ef4444;--radius:12px;
+  --linho:#F7F3EC;--areia:#EFE8DC;--linha:#DCD1BE;
+  --fumo:#6E6353;--castanho:#3F362A;--tinta:#2A241C;
+}
 *,*::before,*::after{box-sizing:border-box}
 *{margin:0}
-body{background:var(--bg);color:var(--text);font-family:'Inter',system-ui,sans-serif;font-size:16px;line-height:1.6;padding-inline:0}
-h1,h2,h3,.display{font-family:'Oswald',sans-serif;text-wrap:balance;line-height:1.05;letter-spacing:-.01em}
-.label{font-size:11px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--orange)}
+body{background:var(--bg);color:var(--text);font-family:'IBM Plex Sans',system-ui,sans-serif;font-size:16px;line-height:1.6;padding-inline:0}
+h1,h2,h3,.display{font-family:'Archivo',sans-serif;text-wrap:balance;line-height:1.05;letter-spacing:-.01em}
+.label{font-size:11px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--castanho)}
 .container{max-width:680px;margin-inline:auto;padding-inline:20px}
 .section{padding-block:64px}
 .section-alt{background:var(--bg2)}
@@ -16,26 +25,26 @@ h1,h2,h3,.display{font-family:'Oswald',sans-serif;text-wrap:balance;line-height:
 /* NAV */
 .nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:100;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}
 .nav-inner{max-width:680px;margin-inline:auto;padding:12px 20px;display:flex;align-items:center;gap:12px}
-.nav-logo{width:36px;height:36px;border-radius:50%;background:var(--orange);color:#000;font-family:'Oswald',sans-serif;font-weight:700;font-size:16px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.nav-logo{display:flex;align-items:center}
 .nav-name{font-size:13px;font-weight:600;color:var(--text2);flex:1}
 .nav-links{display:flex;align-items:center;gap:8px}
 .btn-ghost{display:flex;align-items:center;gap:6px;padding:7px 14px;border-radius:50px;border:1px solid var(--border);background:transparent;color:var(--text);font-size:13px;font-weight:500;text-decoration:none;transition:border-color .2s}
 .btn-ghost:hover{border-color:var(--text2)}
-.btn-orange{display:flex;align-items:center;gap:6px;padding:8px 16px;border-radius:50px;background:var(--orange);color:#000;font-size:13px;font-weight:600;text-decoration:none;transition:background .2s}
-.btn-orange:hover{background:var(--orange-lt)}
+.btn-orange{display:flex;align-items:center;gap:6px;padding:8px 16px;border-radius:50px;background:var(--castanho);color:var(--linho);font-size:13px;font-weight:600;text-decoration:none;transition:background .2s}
+.btn-orange:hover{background:var(--accent)}
 
 /* TOPBAR */
 .topbar{background:var(--bg2);border-bottom:1px solid var(--border);padding:9px 20px;text-align:center;font-size:12px;color:var(--text2);display:flex;align-items:center;justify-content:center;gap:20px;flex-wrap:wrap}
 
 /* HERO */
 .hero{padding-block:64px 56px;position:relative;overflow:hidden}
-.hero::before{content:'';position:absolute;top:-100px;right:-100px;width:400px;height:400px;background:radial-gradient(circle,color-mix(in srgb,var(--orange) 12%,transparent) 0%,transparent 70%);pointer-events:none}
+.hero::before{content:'';position:absolute;top:-100px;right:-100px;width:400px;height:400px;background:radial-gradient(circle,color-mix(in srgb,var(--accent) 12%,transparent) 0%,transparent 70%);pointer-events:none}
 .hero-photo{position:absolute;right:-20px;top:0;bottom:0;width:200px;object-fit:cover;object-position:top;opacity:.25;pointer-events:none;mask-image:linear-gradient(to left,rgba(0,0,0,.6) 0%,transparent 100%);-webkit-mask-image:linear-gradient(to left,rgba(0,0,0,.6) 0%,transparent 100%)}
 @media(min-width:440px){.hero-photo{opacity:.35;width:220px}}
-.hero-tag{display:inline-flex;align-items:center;gap:6px;padding:5px 12px;border-radius:50px;border:1px solid color-mix(in srgb,var(--orange) 35%,transparent);background:color-mix(in srgb,var(--orange) 10%,transparent);margin-bottom:20px}
-.hero-tag .dot{width:6px;height:6px;border-radius:50%;background:var(--orange)}
-.hero-headline{font-family:'Oswald',sans-serif;font-size:clamp(36px,8vw,52px);font-weight:700;line-height:1.05;margin-bottom:20px}
-.hero-headline .accent{color:var(--orange)}
+.hero-tag{display:inline-flex;align-items:center;gap:6px;padding:5px 12px;border-radius:50px;border:1px solid color-mix(in srgb,var(--accent) 35%,transparent);background:color-mix(in srgb,var(--accent) 25%,transparent);margin-bottom:20px}
+.hero-tag .dot{width:6px;height:6px;border-radius:50%;background:var(--accent)}
+.hero-headline{font-family:'Archivo',sans-serif;font-size:clamp(36px,8vw,52px);font-weight:700;line-height:1.05;margin-bottom:20px}
+.hero-headline .accent{color:var(--castanho)}
 .hero-desc{font-size:16px;color:var(--text2);line-height:1.7;margin-bottom:28px}
 .social-proof{display:flex;align-items:center;gap:12px;margin-bottom:28px}
 .avatars{display:flex}
@@ -45,25 +54,25 @@ h1,h2,h3,.display{font-family:'Oswald',sans-serif;text-wrap:balance;line-height:
 .proof-text{font-size:13px}
 .proof-text strong{color:var(--text)}
 .proof-text span{color:var(--text2);display:block}
-.stars{color:var(--orange);font-size:13px}
+.stars{color:var(--accent);font-size:13px}
 .cta-group{display:flex;flex-direction:column;gap:10px}
-.btn-primary{display:flex;align-items:center;justify-content:center;gap:8px;padding:16px 28px;border-radius:50px;background:var(--orange);color:#000;font-size:16px;font-weight:600;text-decoration:none;border:none;transition:background .2s,transform .15s;font-family:'Oswald',sans-serif;letter-spacing:.02em}
-.btn-primary:hover{background:var(--orange-lt);transform:translateY(-1px)}
+.btn-primary{display:flex;align-items:center;justify-content:center;gap:8px;padding:16px 28px;border-radius:50px;background:var(--castanho);color:var(--linho);font-size:16px;font-weight:600;text-decoration:none;border:none;transition:background .2s,transform .15s;font-family:'Archivo',sans-serif;letter-spacing:.02em}
+.btn-primary:hover{background:var(--accent);transform:translateY(-1px)}
 .reply-note{font-size:12px;color:var(--text3);text-align:center}
-.btn-secondary{display:flex;align-items:center;justify-content:center;gap:8px;padding:14px 28px;border-radius:50px;background:transparent;border:1px solid var(--border);color:var(--text);font-size:15px;font-weight:500;text-decoration:none;transition:border-color .2s;font-family:'Oswald',sans-serif;letter-spacing:.02em}
+.btn-secondary{display:flex;align-items:center;justify-content:center;gap:8px;padding:14px 28px;border-radius:50px;background:transparent;border:1px solid var(--border);color:var(--text);font-size:15px;font-weight:500;text-decoration:none;transition:border-color .2s;font-family:'Archivo',sans-serif;letter-spacing:.02em}
 .btn-secondary:hover{border-color:var(--text2)}
 .badges-bar{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:32px;padding-top:32px;border-top:1px solid var(--border)}
 .badge-item{display:flex;align-items:center;gap:10px;background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:12px 14px;font-size:13px;color:var(--text2)}
-.badge-icon{width:32px;height:32px;border-radius:8px;background:color-mix(in srgb,var(--orange) 15%,transparent);border:1px solid color-mix(in srgb,var(--orange) 25%,transparent);display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0}
+.badge-icon{width:32px;height:32px;border-radius:8px;background:color-mix(in srgb,var(--accent) 15%,transparent);border:1px solid color-mix(in srgb,var(--accent) 25%,transparent);display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0}
 
 /* ACCORDION */
 .accordion-item{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;margin-top:8px}
 .accordion-item:first-child{margin-top:0}
-.accordion-trigger{width:100%;padding:18px 20px;display:flex;align-items:center;gap:12px;background:none;border:none;color:var(--text);font-size:15px;font-weight:500;text-align:left;cursor:pointer;font-family:'Inter',sans-serif}
-.acc-icon{width:28px;height:28px;border-radius:50%;background:color-mix(in srgb,var(--orange) 15%,transparent);border:1px solid color-mix(in srgb,var(--orange) 30%,transparent);display:flex;align-items:center;justify-content:center;font-size:14px;flex-shrink:0}
+.accordion-trigger{width:100%;padding:18px 20px;display:flex;align-items:center;gap:12px;background:none;border:none;color:var(--text);font-size:15px;font-weight:500;text-align:left;cursor:pointer;font-family:'IBM Plex Sans',sans-serif}
+.acc-icon{width:28px;height:28px;border-radius:50%;background:color-mix(in srgb,var(--accent) 15%,transparent);border:1px solid color-mix(in srgb,var(--accent) 30%,transparent);display:flex;align-items:center;justify-content:center;font-size:14px;flex-shrink:0}
 
 /* QUOTE */
-.quote-box{border-left:3px solid var(--orange);padding:16px 20px;margin-block:24px}
+.quote-box{border-left:3px solid var(--accent);padding:16px 20px;margin-block:24px}
 .quote-box p{font-size:15px;font-weight:500}
 .quote-box .sub{font-size:13px;color:var(--text2);margin-top:4px}
 
@@ -78,8 +87,8 @@ h1,h2,h3,.display{font-family:'Oswald',sans-serif;text-wrap:balance;line-height:
 
 /* PHILOSOPHY */
 .phil-item{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:20px;display:flex;gap:14px;margin-top:12px}
-.phil-icon{width:40px;height:40px;border-radius:10px;background:color-mix(in srgb,var(--orange) 15%,transparent);display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0}
-.phil-item h3{font-size:15px;font-weight:600;margin-bottom:4px;font-family:'Inter',sans-serif}
+.phil-icon{width:40px;height:40px;border-radius:10px;background:color-mix(in srgb,var(--accent) 15%,transparent);display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0}
+.phil-item h3{font-size:15px;font-weight:600;margin-bottom:4px;font-family:'IBM Plex Sans',sans-serif}
 .phil-item p{font-size:13px;color:var(--text2);line-height:1.5}
 
 /* METHOD */
@@ -90,28 +99,28 @@ h1,h2,h3,.display{font-family:'Oswald',sans-serif;text-wrap:balance;line-height:
 /* FOR/NOT FOR */
 .for-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:24px}
 .for-card{border-radius:var(--radius);padding:20px;border:1px solid}
-.for-card.yes{border-color:color-mix(in srgb,var(--orange) 40%,transparent);background:color-mix(in srgb,var(--orange) 6%,transparent)}
+.for-card.yes{border-color:color-mix(in srgb,var(--accent) 40%,transparent);background:color-mix(in srgb,var(--accent) 6%,transparent)}
 .for-card.no{border-color:var(--border);background:var(--surface)}
 .for-title{font-size:14px;font-weight:600;margin-bottom:14px;display:flex;align-items:center;gap:8px}
 .for-badge{width:22px;height:22px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px}
-.for-card.yes .for-badge{background:var(--orange);color:#000}
+.for-card.yes .for-badge{background:var(--accent);color:var(--castanho)}
 .for-card.no .for-badge{background:color-mix(in srgb,var(--red) 20%,transparent);color:var(--red);border:1px solid color-mix(in srgb,var(--red) 30%,transparent)}
 .for-list{list-style:none;padding:0;display:flex;flex-direction:column;gap:8px}
 .for-list li{display:flex;align-items:flex-start;gap:8px;font-size:12px;line-height:1.4;color:var(--text2)}
 .for-list li::before{flex-shrink:0;margin-top:2px;font-size:11px}
-.for-card.yes .for-list li::before{content:'✓';color:var(--orange)}
+.for-card.yes .for-list li::before{content:'✓';color:var(--castanho)}
 .for-card.no .for-list li::before{content:'✗';color:var(--red)}
 
 /* DELIVERY */
 .delivery-item{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:18px 20px;display:flex;gap:14px;margin-top:10px}
-.del-icon{width:36px;height:36px;border-radius:10px;background:color-mix(in srgb,var(--orange) 15%,transparent);display:flex;align-items:center;justify-content:center;font-size:17px;flex-shrink:0}
-.delivery-item h3{font-size:14px;font-weight:600;margin-bottom:2px;font-family:'Inter',sans-serif}
+.del-icon{width:36px;height:36px;border-radius:10px;background:color-mix(in srgb,var(--accent) 15%,transparent);display:flex;align-items:center;justify-content:center;font-size:17px;flex-shrink:0}
+.delivery-item h3{font-size:14px;font-weight:600;margin-bottom:2px;font-family:'IBM Plex Sans',sans-serif}
 .delivery-item p{font-size:12px;color:var(--text2);line-height:1.4}
 
 /* STEPS */
 .step-item{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:18px 20px;display:flex;gap:14px;align-items:flex-start;margin-top:10px}
-.step-num{width:36px;height:36px;border-radius:50%;background:var(--orange);color:#000;font-family:'Oswald',sans-serif;font-size:18px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0}
-.step-item h3{font-size:15px;font-weight:600;margin-bottom:3px;font-family:'Inter',sans-serif}
+.step-num{width:36px;height:36px;border-radius:50%;background:var(--castanho);color:var(--linho);font-family:'Archivo',sans-serif;font-size:18px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.step-item h3{font-size:15px;font-weight:600;margin-bottom:3px;font-family:'IBM Plex Sans',sans-serif}
 .step-item p{font-size:13px;color:var(--text2);line-height:1.4}
 
 /* TESTIMONIALS */
@@ -120,49 +129,49 @@ h1,h2,h3,.display{font-family:'Oswald',sans-serif;text-wrap:balance;line-height:
 .test-av{width:40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:14px;color:#fff;flex-shrink:0}
 .test-name{font-size:14px;font-weight:600}
 .test-meta{font-size:12px;color:var(--text2)}
-.test-badge{display:inline-flex;align-items:center;gap:4px;padding:3px 8px;border-radius:50px;background:color-mix(in srgb,var(--orange) 15%,transparent);border:1px solid color-mix(in srgb,var(--orange) 30%,transparent);font-size:11px;color:var(--orange);margin-top:3px}
+.test-badge{display:inline-flex;align-items:center;gap:4px;padding:3px 8px;border-radius:50px;background:color-mix(in srgb,var(--accent) 15%,transparent);border:1px solid color-mix(in srgb,var(--accent) 30%,transparent);font-size:11px;color:var(--castanho);margin-top:3px}
 .test-quote{font-size:14px;color:var(--text2);line-height:1.6;font-style:italic}
 .test-plan{font-size:11px;color:var(--text3);margin-top:10px;text-transform:uppercase;letter-spacing:.08em}
 
 /* INSTA */
-.insta-btn{display:flex;align-items:center;justify-content:center;gap:8px;padding:16px 28px;border-radius:50px;background:linear-gradient(135deg,#f97316,#e1306c,#833ab4);color:#fff;font-size:16px;font-weight:600;text-decoration:none;margin-top:20px;transition:opacity .2s,transform .15s;font-family:'Oswald',sans-serif;letter-spacing:.03em}
+.insta-btn{display:flex;align-items:center;justify-content:center;gap:8px;padding:16px 28px;border-radius:50px;background:linear-gradient(135deg,#f97316,#e1306c,#833ab4);color:#fff;font-size:16px;font-weight:600;text-decoration:none;margin-top:20px;transition:opacity .2s,transform .15s;font-family:'Archivo',sans-serif;letter-spacing:.03em}
 .insta-btn:hover{opacity:.9;transform:translateY(-1px)}
 
 /* FAQ */
 .faq-item{border-bottom:1px solid var(--border)}
-.faq-trigger{width:100%;padding:18px 0;display:flex;align-items:center;justify-content:space-between;gap:12px;background:none;border:none;color:var(--text);font-size:15px;font-weight:500;text-align:left;cursor:pointer;font-family:'Inter',sans-serif}
+.faq-trigger{width:100%;padding:18px 0;display:flex;align-items:center;justify-content:space-between;gap:12px;background:none;border:none;color:var(--text);font-size:15px;font-weight:500;text-align:left;cursor:pointer;font-family:'IBM Plex Sans',sans-serif}
 .faq-chev{width:24px;height:24px;border-radius:50%;background:var(--surface);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:11px;flex-shrink:0;transition:transform .2s}
 .faq-item.open .faq-chev{transform:rotate(180deg)}
 .faq-answer{font-size:14px;color:var(--text2);line-height:1.6;padding-bottom:18px;display:none}
 .faq-item.open .faq-answer{display:block}
 
 /* FINAL CTA */
-.final-cta{background:var(--orange);border-radius:16px;padding:36px 28px;text-align:center;color:#000;margin-block:32px}
-.final-cta .label{color:rgba(0,0,0,.5)}
-.final-cta h2{font-size:clamp(24px,5vw,32px);color:#000;margin-block:12px}
-.final-cta p{font-size:15px;color:rgba(0,0,0,.7);max-width:460px;margin-inline:auto}
-.btn-dark{display:inline-flex;align-items:center;gap:8px;padding:14px 28px;border-radius:50px;background:#000;color:#fff;font-size:16px;font-weight:600;text-decoration:none;margin-top:24px;transition:background .2s;font-family:'Oswald',sans-serif;letter-spacing:.02em}
+.final-cta{background:var(--castanho);border-radius:16px;padding:36px 28px;text-align:center;color:var(--linho);margin-block:32px}
+.final-cta .label{color:rgba(247,243,236,.6)}
+.final-cta h2{font-size:clamp(24px,5vw,32px);color:var(--linho);margin-block:12px}
+.final-cta p{font-size:15px;color:rgba(247,243,236,.75);max-width:460px;margin-inline:auto}
+.btn-dark{display:inline-flex;align-items:center;gap:8px;padding:14px 28px;border-radius:50px;background:#000;color:#fff;font-size:16px;font-weight:600;text-decoration:none;margin-top:24px;transition:background .2s;font-family:'Archivo',sans-serif;letter-spacing:.02em}
 .btn-dark:hover{background:#1a1a1a}
 
 /* PLANS */
 .plan-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:24px;margin-top:12px;position:relative}
-.plan-card.featured{border-color:var(--orange);background:color-mix(in srgb,var(--orange) 5%,var(--surface))}
-.plan-badge{position:absolute;top:-1px;left:50%;transform:translateX(-50%);background:var(--orange);color:#000;font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:4px 14px;border-radius:0 0 8px 8px;white-space:nowrap}
+.plan-card.featured{border-color:var(--accent);background:color-mix(in srgb,var(--accent) 15%,var(--surface))}
+.plan-badge{position:absolute;top:-1px;left:50%;transform:translateX(-50%);background:var(--accent);color:var(--castanho);font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:4px 14px;border-radius:0 0 8px 8px;white-space:nowrap}
 .plan-label{font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--text3);margin-bottom:8px;display:flex;align-items:center;gap:6px}
 .plan-price{display:flex;align-items:baseline;gap:4px;margin-bottom:4px}
-.plan-price .cur{font-size:18px;font-weight:600;color:var(--text2);font-family:'Oswald',sans-serif}
-.plan-price .amt{font-size:48px;font-weight:700;color:var(--text);font-family:'Oswald',sans-serif;font-variant-numeric:tabular-nums}
+.plan-price .cur{font-size:18px;font-weight:600;color:var(--text2);font-family:'Archivo',sans-serif}
+.plan-price .amt{font-size:48px;font-weight:700;color:var(--text);font-family:'Archivo',sans-serif;font-variant-numeric:tabular-nums}
 .plan-price .per{font-size:14px;color:var(--text2)}
 .plan-note{font-size:12px;color:var(--text3);margin-bottom:4px}
 .plan-hot{font-size:12px;color:var(--green);margin-bottom:14px}
 .plan-desc{font-size:13px;color:var(--text2);margin-bottom:16px;line-height:1.5;padding-bottom:16px;border-bottom:1px solid var(--border)}
 .plan-feats{list-style:none;padding:0;display:flex;flex-direction:column;gap:8px;margin-bottom:20px}
 .plan-feats li{font-size:13px;display:flex;align-items:center;gap:8px}
-.plan-feats li::before{content:'✓';color:var(--orange);font-weight:700;flex-shrink:0}
-.btn-plan{display:flex;align-items:center;justify-content:center;padding:14px;border-radius:50px;border:1px solid var(--border);background:transparent;color:var(--text);font-size:15px;font-weight:600;text-decoration:none;transition:background .2s,border-color .2s;font-family:'Oswald',sans-serif;letter-spacing:.03em}
+.plan-feats li::before{content:'✓';color:var(--castanho);font-weight:700;flex-shrink:0}
+.btn-plan{display:flex;align-items:center;justify-content:center;padding:14px;border-radius:50px;border:1px solid var(--border);background:transparent;color:var(--text);font-size:15px;font-weight:600;text-decoration:none;transition:background .2s,border-color .2s;font-family:'Archivo',sans-serif;letter-spacing:.03em}
 .btn-plan:hover{background:var(--surface2);border-color:var(--text2)}
-.plan-card.featured .btn-plan{background:var(--orange);border-color:var(--orange);color:#000}
-.plan-card.featured .btn-plan:hover{background:var(--orange-lt)}
+.plan-card.featured .btn-plan{background:var(--castanho);border-color:var(--castanho);color:var(--linho)}
+.plan-card.featured .btn-plan:hover{background:var(--accent)}
 
 /* FOOTER */
 .footer{padding-block:32px;border-top:1px solid var(--border);text-align:center;font-size:12px;color:var(--text3)}
@@ -191,14 +200,14 @@ h1,h2,h3,.display{font-family:'Oswald',sans-serif;text-wrap:balance;line-height:
 <!-- NAV -->
 <nav class="nav">
   <div class="nav-inner">
-    <div class="nav-logo">R</div>
-    <span class="nav-name">Richard Machado · Personal</span>
+    <div class="nav-logo"><img src="https://www.darlisxavier.com.br/assets/img/logo-escuro.png" alt="Darlis Xavier" style="height:48px;width:auto;display:block;"></div>
+    <span class="nav-name">Darlis Xavier · Personal</span>
     <div class="nav-links">
-      <a href="https://instagram.com/richard_n_machado" target="_blank" rel="noopener" class="btn-ghost">
+      <a href="https://instagram.com/darlisxavier" target="_blank" rel="noopener" class="btn-ghost">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg>
         Insta
       </a>
-      <a href="https://wa.me/5542991804793" target="_blank" rel="noopener" class="btn-orange">
+      <a href="https://wa.me/5548988489337" target="_blank" rel="noopener" class="btn-orange">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.116.549 4.104 1.508 5.831L0 24l6.335-1.652A11.954 11.954 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.815 9.815 0 01-5.056-1.401l-.361-.215-3.762.981.999-3.662-.235-.374A9.774 9.774 0 012.182 12c0-5.42 4.398-9.818 9.818-9.818 5.42 0 9.818 4.398 9.818 9.818 0 5.42-4.398 9.818-9.818 9.818z"/></svg>
         WhatsApp
       </a>
@@ -208,17 +217,17 @@ h1,h2,h3,.display{font-family:'Oswald',sans-serif;text-wrap:balance;line-height:
 
 <!-- TOPBAR -->
 <div class="topbar">
-  <span>🏋️ Reg. 12345678-0 · Profissional registrado</span>
+  <span>🏋️ CREF 012345-G/SC · Profissional registrado</span>
   <span>❤️ Saúde antes da estética</span>
 </div>
 
 <!-- HERO -->
 <section class="hero">
-  <img src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?w=400&auto=format&fit=crop&q=80" alt="" class="hero-photo" loading="eager" aria-hidden="true">
+  <img src="https://www.darlisxavier.com.br/assets/img/darlis-retrato.jpg" alt="Darlis Xavier" class="hero-photo" loading="eager" aria-hidden="true">
   <div class="container">
     <div class="hero-tag">
       <span class="dot"></span>
-      <span class="label" style="font-size:11px">Richard Nunes Machado · Personal Trainer</span>
+      <span class="label" style="font-size:11px">Darlis Xavier · Personal Trainer</span>
     </div>
     <h1 class="hero-headline">
       Seu objetivo.<br>Seu treino.<br><span class="accent">Seus resultados.</span>
@@ -239,7 +248,7 @@ h1,h2,h3,.display{font-family:'Oswald',sans-serif;text-wrap:balance;line-height:
       </div>
     </div>
     <div class="cta-group">
-      <a href="https://wa.me/5542991804793" target="_blank" rel="noopener" class="btn-primary">💬 Conversar com o Richard</a>
+      <a href="https://wa.me/5548988489337" target="_blank" rel="noopener" class="btn-primary">💬 Conversar com a Darlis</a>
       <p class="reply-note">ℹ️ Eu respondo pessoalmente, normalmente em até 4h</p>
       <a href="#planos" class="btn-secondary">↓ Conheça os planos</a>
     </div>
@@ -270,7 +279,7 @@ h1,h2,h3,.display{font-family:'Oswald',sans-serif;text-wrap:balance;line-height:
       <p>Não importa de onde você está saindo. Importa pra onde a gente vai.</p>
       <p class="sub">Aqui ninguém julga. A gente começa do seu nível, no seu ritmo, e constrói junto.</p>
     </div>
-    <a href="https://wa.me/5542991804793" target="_blank" rel="noopener" class="btn-primary">💬 Quero falar com o Richard</a>
+    <a href="https://wa.me/5548988489337" target="_blank" rel="noopener" class="btn-primary">💬 Quero falar com a Darlis</a>
   </div>
 </section>
 
@@ -299,13 +308,13 @@ h1,h2,h3,.display{font-family:'Oswald',sans-serif;text-wrap:balance;line-height:
 <section class="section section-alt">
   <div class="container">
     <p class="label">SOBRE MIM</p>
-    <h2 style="font-size:clamp(26px,5vw,36px);margin-block:10px 20px">Quem é Richard Machado</h2>
+    <h2 style="font-size:clamp(26px,5vw,36px);margin-block:10px 20px">Quem é Darlis Xavier</h2>
     <div class="trainer-wrap">
-      <img src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?w=300&auto=format&fit=crop&q=80" alt="Richard Machado Personal Trainer" class="trainer-photo">
+      <img src="https://www.darlisxavier.com.br/assets/img/darlis-sobre.jpg" alt="Darlis Xavier" class="trainer-photo">
       <div>
     <p style="font-size:15px;font-weight:600;margin-bottom:10px">Sou movido por resultados reais e pelo desenvolvimento de quem treina comigo.</p>
     <p style="font-size:14px;color:var(--text2);line-height:1.7;margin-bottom:14px">Treinos personalizados para quem busca resultados de verdade. Meu objetivo é transformar seus objetivos em um plano de treinamento claro, eficiente e adaptado à sua rotina, com acompanhamento próximo durante todo o processo.</p>
-    <p style="font-size:14px;font-weight:600;color:var(--orange)">Reg. 12345678-0</p>
+    <p style="font-size:14px;font-weight:600;color:var(--fumo)">CREF 012345-G/SC</p>
       </div>
     </div>
     <div class="tag-list">
@@ -453,7 +462,7 @@ h1,h2,h3,.display{font-family:'Oswald',sans-serif;text-wrap:balance;line-height:
         </div>
         <span class="stars" style="margin-left:auto">★★★★★</span>
       </div>
-      <p class="test-quote">"Em 3 meses voltei a me sentir bem no meu corpo. O Richard respeitou meu tempo e minha rotina. Nunca achei que conseguiria manter a constância, mas com o acompanhamento ficou muito mais fácil."</p>
+      <p class="test-quote">"Em 3 meses voltei a me sentir bem no meu corpo. A Darlis respeitou meu tempo e minha rotina. Nunca achei que conseguiria manter a constância, mas com o acompanhamento ficou muito mais fácil."</p>
       <p class="test-plan">PLANO TRIMESTRAL</p>
     </div>
     <div class="test-card">
@@ -477,7 +486,7 @@ h1,h2,h3,.display{font-family:'Oswald',sans-serif;text-wrap:balance;line-height:
         </div>
         <span class="stars" style="margin-left:auto">★★★★★</span>
       </div>
-      <p class="test-quote">"Nunca tinha treinado na vida e sempre tive medo. O Richard me deu um plano pra treinar em casa no começo, sem pressão. Hoje treino com confiança e me sinto muito melhor."</p>
+      <p class="test-quote">"Nunca tinha treinado na vida e sempre tive medo. A Darlis me deu um plano pra treinar em casa no começo, sem pressão. Hoje treino com confiança e me sinto muito melhor."</p>
       <p class="test-plan">PLANO MENSAL</p>
     </div>
   </div>
@@ -490,14 +499,14 @@ h1,h2,h3,.display{font-family:'Oswald',sans-serif;text-wrap:balance;line-height:
     <h2 style="font-size:clamp(24px,5vw,34px);margin-block:10px 12px">Me segue no Instagram</h2>
     <p style="color:var(--text2);font-size:15px">Dicas de treino, evolução de alunos e conteúdo pra quem quer começar ou melhorar. É de lá que sai muito conteúdo gratuito.</p>
     <div class="insta-grid">
-      <img src="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?w=300&auto=format&fit=crop&q=75" alt="Treino" loading="lazy">
-      <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=300&auto=format&fit=crop&q=75" alt="Musculação" loading="lazy">
-      <img src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?w=300&auto=format&fit=crop&q=75" alt="Personal" loading="lazy">
-      <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=300&auto=format&fit=crop&q=75" alt="Treino funcional" loading="lazy">
-      <img src="https://images.unsplash.com/photo-1526506118085-60ce8714f8c5?w=300&auto=format&fit=crop&q=75" alt="Emagrecimento" loading="lazy">
-      <img src="https://images.unsplash.com/photo-1549060279-7e168fcee0c2?w=300&auto=format&fit=crop&q=75" alt="Academia" loading="lazy">
+      <img src="https://www.darlisxavier.com.br/assets/img/resultado-1.jpg" alt="Resultado 1" loading="lazy">
+      <img src="https://www.darlisxavier.com.br/assets/img/resultado-2.jpg" alt="Resultado 2" loading="lazy">
+      <img src="https://www.darlisxavier.com.br/assets/img/resultado-3.jpg" alt="Resultado 3" loading="lazy">
+      <img src="https://www.darlisxavier.com.br/assets/img/resultado-4.jpg" alt="Resultado 4" loading="lazy">
+      <img src="https://www.darlisxavier.com.br/assets/img/darlis-avaliacao.jpg" alt="Avaliação" loading="lazy">
+      <img src="https://www.darlisxavier.com.br/assets/img/darlis-acompanhamento.jpg" alt="Acompanhamento" loading="lazy">
     </div>
-    <a href="https://instagram.com/richard_n_machado" target="_blank" rel="noopener" class="insta-btn">📷 @richard_n_machado</a>
+    <a href="https://instagram.com/darlisxavier" target="_blank" rel="noopener" class="insta-btn">📷 @darlisxavier</a>
   </div>
 </section>
 
@@ -539,7 +548,7 @@ h1,h2,h3,.display{font-family:'Oswald',sans-serif;text-wrap:balance;line-height:
       <p class="label">VAMOS CONVERSAR</p>
       <h2>Está pronto para começar?</h2>
       <p>Não importa se você está começando agora ou já treina há algum tempo. O próximo passo é ter um planejamento adequado aos seus objetivos. Entre em contato pelo WhatsApp e escolha o plano ideal para você.</p>
-      <a href="https://wa.me/5542991804793" target="_blank" rel="noopener" class="btn-dark">💬 Próximo passo</a>
+      <a href="https://wa.me/5548988489337" target="_blank" rel="noopener" class="btn-dark">💬 Próximo passo</a>
     </div>
   </div>
 </section>
@@ -563,7 +572,7 @@ h1,h2,h3,.display{font-family:'Oswald',sans-serif;text-wrap:balance;line-height:
         <li>Ajustes no treino conforme seus resultados</li>
         <li>Suporte via WhatsApp</li>
       </ul>
-      <a href="https://wa.me/5542991804793?text=Oi%20Richard!%20Quero%20saber%20mais%20sobre%20o%20plano%20mensal." target="_blank" rel="noopener" class="btn-plan">Garantir minha vaga</a>
+      <a href="https://wa.me/5548988489337?text=Oi%20Darlis!%20Quero%20saber%20mais%20sobre%20o%20plano%20mensal." target="_blank" rel="noopener" class="btn-plan">Garantir minha vaga</a>
     </div>
 
     <div class="plan-card">
@@ -578,13 +587,13 @@ h1,h2,h3,.display{font-family:'Oswald',sans-serif;text-wrap:balance;line-height:
         <li>Ajustes no treino conforme seus resultados</li>
         <li>Suporte via WhatsApp</li>
       </ul>
-      <a href="https://wa.me/5542991804793?text=Oi%20Richard!%20Quero%20saber%20mais%20sobre%20o%20plano%20trimestral." target="_blank" rel="noopener" class="btn-plan">Garantir minha vaga</a>
+      <a href="https://wa.me/5548988489337?text=Oi%20Darlis!%20Quero%20saber%20mais%20sobre%20o%20plano%20trimestral." target="_blank" rel="noopener" class="btn-plan">Garantir minha vaga</a>
     </div>
 
     <div class="plan-card featured">
       <div class="plan-badge">MAIS POPULAR</div>
       <div class="plan-label" style="margin-top:12px">⭐ SEMESTRAL</div>
-      <p style="font-size:12px;color:var(--orange);margin-bottom:6px">🔥 Mais vendido, poucas vagas</p>
+      <p style="font-size:12px;color:var(--castanho);margin-bottom:6px">🔥 Mais vendido, poucas vagas</p>
       <div class="plan-price"><span class="cur">R$</span><span class="amt">1.000</span><span class="per">/ 6 meses</span></div>
       <p class="plan-note">em até 6x sem juros</p>
       <p class="plan-desc">Para quem está comprometido com um projeto de evolução a longo prazo, com acompanhamento contínuo e ajustes durante todo o período.</p>
@@ -596,7 +605,7 @@ h1,h2,h3,.display{font-family:'Oswald',sans-serif;text-wrap:balance;line-height:
         <li>Suporte via WhatsApp</li>
         <li>Chamada de vídeo quando precisar</li>
       </ul>
-      <a href="https://wa.me/5542991804793?text=Oi%20Richard!%20Quero%20saber%20mais%20sobre%20o%20plano%20semestral." target="_blank" rel="noopener" class="btn-plan">Garantir minha vaga</a>
+      <a href="https://wa.me/5548988489337?text=Oi%20Darlis!%20Quero%20saber%20mais%20sobre%20o%20plano%20semestral." target="_blank" rel="noopener" class="btn-plan">Garantir minha vaga</a>
     </div>
   </div>
 </section>
@@ -604,10 +613,10 @@ h1,h2,h3,.display{font-family:'Oswald',sans-serif;text-wrap:balance;line-height:
 <!-- FOOTER -->
 <footer class="footer">
   <div class="container">
-    <p>© 2026 Richard Nunes Machado · Personal Trainer · Reg. 12345678-0</p>
+    <p>© 2026 Darlis Xavier · Personal Trainer · CREF 012345-G/SC</p>
     <p style="margin-top:6px">
-      <a href="https://wa.me/5542991804793" target="_blank">WhatsApp</a> ·
-      <a href="https://instagram.com/richard_n_machado" target="_blank">Instagram</a>
+      <a href="https://wa.me/5548988489337" target="_blank">WhatsApp</a> ·
+      <a href="https://instagram.com/darlisxavier" target="_blank">Instagram</a>
     </p>
   </div>
 </footer>
