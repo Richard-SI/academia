@@ -39,7 +39,4 @@ Para usar um domínio próprio (ex: `richardpersonal.com.br`):
 3. Aponte o DNS conforme as instruções do Netlify
 4. HTTPS é ativado automaticamente
 
-## Contato
 
-- WhatsApp: [5542991804793](https://wa.me/5542991804793)
-- Instagram: [@richard_n_machado](https://instagram.com/richard_n_machado)
