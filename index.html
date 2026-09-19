@@ -30,6 +30,8 @@ h1,h2,h3,.display{font-family:'Oswald',sans-serif;text-wrap:balance;line-height:
 /* HERO */
 .hero{padding-block:64px 56px;position:relative;overflow:hidden}
 .hero::before{content:'';position:absolute;top:-100px;right:-100px;width:400px;height:400px;background:radial-gradient(circle,color-mix(in srgb,var(--orange) 12%,transparent) 0%,transparent 70%);pointer-events:none}
+.hero-photo{position:absolute;right:-20px;top:0;bottom:0;width:200px;object-fit:cover;object-position:top;opacity:.25;pointer-events:none;mask-image:linear-gradient(to left,rgba(0,0,0,.6) 0%,transparent 100%);-webkit-mask-image:linear-gradient(to left,rgba(0,0,0,.6) 0%,transparent 100%)}
+@media(min-width:440px){.hero-photo{opacity:.35;width:220px}}
 .hero-tag{display:inline-flex;align-items:center;gap:6px;padding:5px 12px;border-radius:50px;border:1px solid color-mix(in srgb,var(--orange) 35%,transparent);background:color-mix(in srgb,var(--orange) 10%,transparent);margin-bottom:20px}
 .hero-tag .dot{width:6px;height:6px;border-radius:50%;background:var(--orange)}
 .hero-headline{font-family:'Oswald',sans-serif;font-size:clamp(36px,8vw,52px);font-weight:700;line-height:1.05;margin-bottom:20px}
@@ -50,9 +52,9 @@ h1,h2,h3,.display{font-family:'Oswald',sans-serif;text-wrap:balance;line-height:
 .reply-note{font-size:12px;color:var(--text3);text-align:center}
 .btn-secondary{display:flex;align-items:center;justify-content:center;gap:8px;padding:14px 28px;border-radius:50px;background:transparent;border:1px solid var(--border);color:var(--text);font-size:15px;font-weight:500;text-decoration:none;transition:border-color .2s;font-family:'Oswald',sans-serif;letter-spacing:.02em}
 .btn-secondary:hover{border-color:var(--text2)}
-.badges-bar{display:flex;flex-wrap:wrap;gap:10px;margin-top:32px;padding-top:32px;border-top:1px solid var(--border)}
-.badge-item{display:flex;align-items:center;gap:7px;font-size:12px;color:var(--text2)}
-.badge-icon{width:28px;height:28px;border-radius:8px;background:var(--surface);display:flex;align-items:center;justify-content:center;font-size:14px;flex-shrink:0}
+.badges-bar{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:32px;padding-top:32px;border-top:1px solid var(--border)}
+.badge-item{display:flex;align-items:center;gap:10px;background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:12px 14px;font-size:13px;color:var(--text2)}
+.badge-icon{width:32px;height:32px;border-radius:8px;background:color-mix(in srgb,var(--orange) 15%,transparent);border:1px solid color-mix(in srgb,var(--orange) 25%,transparent);display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0}
 
 /* ACCORDION */
 .accordion-item{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;margin-top:8px}
@@ -81,8 +83,9 @@ h1,h2,h3,.display{font-family:'Oswald',sans-serif;text-wrap:balance;line-height:
 .phil-item p{font-size:13px;color:var(--text2);line-height:1.5}
 
 /* METHOD */
-.methods-row{display:flex;gap:10px;margin-top:20px;flex-wrap:wrap}
-.method-pill{padding:10px 20px;border-radius:50px;background:var(--surface);border:1px solid var(--border);font-size:14px;font-weight:500}
+.methods-row{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:20px}
+.method-pill{padding:20px 12px;border-radius:var(--radius);background:var(--surface);border:1px solid var(--border);font-size:13px;font-weight:500;text-align:center;display:flex;flex-direction:column;align-items:center;gap:8px}
+.method-pill .m-icon{font-size:24px;display:block}
 
 /* FOR/NOT FOR */
 .for-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:24px}
@@ -174,11 +177,11 @@ h1,h2,h3,.display{font-family:'Oswald',sans-serif;text-wrap:balance;line-height:
 
 /* IMAGES */
 .hero-img-wrap{margin-top:36px;border-radius:16px;overflow:hidden;border:1px solid var(--border);position:relative}
-.hero-img{width:100%;height:260px;object-fit:cover;display:block;filter:brightness(.85)}
-.hero-img-overlay{position:absolute;inset:0;background:linear-gradient(to top,var(--bg) 0%,transparent 50%);pointer-events:none}
+.hero-img{width:100%;height:220px;object-fit:cover;display:block;filter:brightness(.75) contrast(1.05)}
+.hero-img-overlay{position:absolute;inset:0;background:linear-gradient(to top,var(--bg) 0%,transparent 45%);pointer-events:none}
 
-.trainer-wrap{margin-bottom:24px;display:flex;gap:16px;align-items:flex-start}
-.trainer-photo{width:110px;height:140px;object-fit:cover;border-radius:12px;border:2px solid var(--border);flex-shrink:0}
+.trainer-wrap{margin-bottom:24px;display:flex;gap:20px;align-items:flex-start}
+.trainer-photo{width:130px;height:190px;object-fit:cover;object-position:top;border-radius:12px;border:2px solid var(--border);flex-shrink:0}
 
 .insta-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin-top:20px;border-radius:12px;overflow:hidden}
 .insta-grid img{width:100%;aspect-ratio:1;object-fit:cover;display:block;transition:opacity .2s}
@@ -211,6 +214,7 @@ h1,h2,h3,.display{font-family:'Oswald',sans-serif;text-wrap:balance;line-height:
 
 <!-- HERO -->
 <section class="hero">
+  <img src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?w=400&auto=format&fit=crop&q=80" alt="" class="hero-photo" loading="eager" aria-hidden="true">
   <div class="container">
     <div class="hero-tag">
       <span class="dot"></span>
@@ -351,9 +355,9 @@ h1,h2,h3,.display{font-family:'Oswald',sans-serif;text-wrap:balance;line-height:
     <h2 style="font-size:clamp(26px,5vw,36px);margin-block:10px 12px">Treino real, em qualquer lugar.</h2>
     <p style="color:var(--text2);font-size:15px">Monto seu plano de acordo com a sua rotina e onde você consegue treinar:</p>
     <div class="methods-row">
-      <div class="method-pill">🏋️ Academia</div>
-      <div class="method-pill">🏠 Em casa</div>
-      <div class="method-pill">🏢 Estúdio</div>
+      <div class="method-pill"><span class="m-icon">🏋️</span>Academia</div>
+      <div class="method-pill"><span class="m-icon">🏠</span>Em casa</div>
+      <div class="method-pill"><span class="m-icon">🏢</span>Estúdio</div>
     </div>
 
     <div style="margin-top:36px">
